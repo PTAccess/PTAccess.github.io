@@ -1,0 +1,58 @@
+I"?<p>This chapter covers the process of importing media from external sources into a session. We’ll cover supported file formats and take a look at the Import dialog and how to use it.</p>
+
+<!--more-->
+
+<h2 id="considerations-prior-to-import">Considerations Prior to Import</h2>
+<p>Pro Tools can read several types of media files. Some can be imported directly into a session file and some might need to be converted. Sometimes files  on a remote disk can be referenced and played back in a session without the need to copy to the local Audio files folder for the session. There are advantages and disadvantages to both. Most important, it’s helpful to know whether a particular file is compatible with your session and how it might change if it needs to be converted for import.</p>
+
+<h3 id="file-characteristics">File Characteristics</h3>
+<p>The two native file types for audio in Pro Tools are WAV and AIFF. BWF (.WAV) is the default format and is perhaps the most widely used. You can import file formats such as mp3, M4a and Quicktime and Pro Tools will convert them to the session’s specified format.</p>
+
+<p>To see what format a session is set to, choose Window&gt;Session Setup or press Command+2 on the numeric keypad to open the Session Setup window.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/47 Session setup window.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open/Close Session Setup Window: Command+2 on the numeric keypad</li>
+</ul>
+
+<h3 id="split-stereo-versus-interleaved-files">Split Stereo versus Interleaved Files</h3>
+<p>Pro Tools can play back split stereo (multiple mono) or interleaved stereo files. Tracks referencing either format in a session are exactly the same and the only difference is how files appear in the operating system.</p>
+
+<p>In the Session Setup window, check the “Interleaved” checkbox to have Pro Tools create stereo files or uncheck if you’d prefer to have Pro Tools create split stereo (or multiple mono) files. This preference can be changed at any time and Pro Tools will create either file format based on the current setting.</p>
+
+<h2 id="importing-audio">Importing Audio</h2>
+<p>The most important concept to grasp as it relates to importing audio into a session is that files which match the session format can be “imported” into a session without necessarily being copied into the Audio Files folder. This means that Pro Tools references the audio file in its original location which might be a local drive, a network drive, a flash drive, etc. A clip appears in the Clips List but the original audio file itself resides in the location from whence it was “imported.” The important takeaway here is that, if the original file and its folder or drive are removed, Pro Tools will no longer be able to see the file and you’ll be alerted that there are missing files upon opening the session.</p>
+
+<p>If you choose to copy audio files while importing (even if the selected files are the same format as the session), new files will be created in the session’s Audio files folder and Pro Tools will reference the newly created files instead of the original audio files. Note that, although Pro Tools sessions support mixed file formats and bit depths, in order for imported audio files to play back correctly, their sample rate must match that of the session otherwise they’ll need to be converted first.</p>
+
+<p>To import audio files into a session, choose File&gt;Import&gt;Audio… or press Command+Shift+I.</p>
+
+<h3 id="import-audio-dialog-box">Import Audio Dialog Box</h3>
+<p>The Import Audio dialog box lets you select files from within a standard file browser to import into a session. After selecting files for import, Pro Tools prompts you with the Audio Import Options dialog where you can choose to import the new audio files to the Clips List or to newly created audio tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/49 Import Audio Dialog.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Import Audio: Command+Shift+I</li>
+  <li>Copy Selected File to Session Audio Files Folder: Control+C</li>
+</ul>
+
+<h2 id="importing-video">Importing Video</h2>
+<p>To import video files into a session, choose File&gt;Import&gt;Video… or press Command+Shift+Option+I. In the resulting dialog, navigate to the file you wish to import. After choosing “Open,” Pro Tools prompts you with the Video Import Options dialog where you can specify the exact location within the session timeline where the video should be placed. Upon import, Pro Tools creates a video track (that is visible only in the Edit window) and, if you chose to import the original audio from the video file, a new audio track with the audio from the video.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/50 Importing Video.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Import Video: Command+Option+Shift+I</li>
+</ul>
+
+<h3 id="working-with-video-tracks">Working with Video Tracks</h3>
+<p>Pro Tools Standard supports a single video track for playback. While it’s possible to place the video anywhere in the timeline, it’s not possible to edit the video track and there can only be one video track in the session. If you import another video, it’ll replace the existing video in the session. Pro Tools | Ultimate supports multiple video tracks and there’s some facility for very basic video editing. We’ll take a further look at video in a later chapter.</p>
+:ET

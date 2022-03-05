@@ -1,0 +1,223 @@
+I"TL<p>This chapter focuses on the various automation modes and how to use them.</p>
+
+<!--more-->
+
+<h2 id="understanding-automation">Understanding Automation</h2>
+<p>Pro Tools let’s you automate the following controls in a session file during playback:</p>
+
+<ul>
+  <li>Track Controls
+    <ul>
+      <li>Volume, Pan, and Mute on Audio tracks, MIDI and Instrument tracks, and Aux Inputs</li>
+      <li>Volume controls on Master Faders</li>
+    </ul>
+  </li>
+  <li>Send Controls
+    <ul>
+      <li>Send Volume, Send Pan, and Send Mute</li>
+    </ul>
+  </li>
+  <li>All Plug-In Controls</li>
+</ul>
+
+<p>When writing any automation to a track, Pro Tools creates automation playlists for each type of automation created so you can selectively edit specific types of automation on any track. It’s important to understand that automation playlists differ from audio and MIDI playlists on a track. Audio and MIDI/Instrument tracks can contain multiple playlists for various performances whereas there can only be one playlist per automation type on a track. Each automation playlist can be displayed one at a time through the Track View Selector. Audio and MIDI playlists are chosen through the Playlist Selector. Throughout Pro Tools documentation, the term “automation playlists” is used when referring to the various automation graphs  displayed through the Track View selector. To avoid potential confusion in this guide, we’ll only use the word “playlist” when referring to audio or MIDI performances (or takes) as discussed earlier. When referring to automation playlists, we’ll use the term “automation view.”</p>
+
+<h3 id="groups-and-automation">Groups and Automation</h3>
+<p>If you’re working with tracks that are part of an active group, writing automation to one of the member tracks will write automation on each of the member tracks. This goes for volume, mute send level and send mutes. Other types of automation are not affected by grouping.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/216 Groups and Automation.mp3" /></audio>
+
+<h3 id="automation-views">Automation Views</h3>
+<p>As mentioned earlier, Pro Tools creates automation views (referred to in Pro Tools documentation as “automation playlists”) that can be accessed through the Track View Selector. For MIDI and Instrument tracks, there’s yet another layer of automation-type controls and that is information like continuous controller data, MIDI volume, pan and mute. This MIDI-specific data is stored with MIDI clips. Since track playlists can contain multiple playlists with different clips on each playlist, it’s possible to have multiple versions of these MIDI data on MIDI and Instrument tracks. For audio tracks, however, if you change playlists, the same automation (that is, track volume, track pan, track mute, etc.) remains the same no matter which audio or MIDI playlist is chosen as the main playlist on the track.</p>
+
+<p>[demonstration: 217 Automation Views (or Automation Playlists)</p>
+
+<h2 id="working-with-automation">Working with Automation</h2>
+<p>Pro Tools includes a powerful automation system. Automation can be generated during playback or, for sighted users, by drawing in automation in the timeline. Naturally, the drawing of automation data using the Edit Tools is not accessible but it is possible to write automation in real time and then use standard editing commands to adjust individual automation types. There are additional automation options in Pro Tools | Ultimate that are not present in Pro Tools Standard. Since some of these features don’t matter too much for those who are drawing automation, it’s not something too many sighted users complain about. However, for screen reader users, not having some of the automation features found only in Pro Tools | Ultimate sometimes poses a bit of challenge. We’ll offer some suggestions to overcome these limitations.</p>
+
+<p>Automation is one of the areas where having a control surface is practically indispensable. Without a surface, automation can certainly be written but one’s options are then quite limited when it comes to adjusting automation through touch-sensitive input. For sighted users, this isn’t an issue because they can drag a mouse and, as long as the mouse is down, this constitutes a “touch” of the control. For screen reader users, this technique is not only cumbersome but quite inefficient. Using a control surface offers a reliable means of fast input, touch-sensitive adjustment and a tactile representation of the automation upon playback.</p>
+
+<h3 id="enabling-and-suspending-automation">Enabling and Suspending Automation</h3>
+<p>Before getting into a discussion about automation modes, we’ll take a look at how to enable and suspend automation globally from the Automation window. To open the Automation window, choose WINDOW &gt; AUTOMATION or press Command+4 on the numeric keypad. The very first control in the Automation window is the Suspend Automation button. When it is selected, automation is disabled for the entire session. When the Suspend Automation button is not selected, any automation on tracks set to play back automation will respond to any automation data.</p>
+
+<p>You can also suspend automation selectively on a per-track basis by setting a track’s automation mode to “Off.”</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/218 Enabling and Suspending Automation.mp3" /></audio>
+
+<h3 id="automation-modes">Automation Modes</h3>
+<p>The five main automation modes in Pro Tools are:</p>
+
+<ul>
+  <li>Off</li>
+  <li>Read</li>
+  <li>Touch</li>
+  <li>Latch</li>
+  <li>Write</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Pro Tools</td>
+      <td>Ultimate has two additional modes which are Touch/Latch and Trim. Let’s look at each of the automation modes and how they work.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="auto-off">Auto Off</h4>
+<p>In Auto Off mode, both automation writing and playback are disabled. Use this mode when you’d like to bypass automation and retain control over a track without changing any previously written automation.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/218 Auto Off.mp3" /></audio>
+
+<h4 id="auto-read">Auto Read</h4>
+<p>In Auto Read mode, Pro Tools plays back the session using automation. All writing of automation data is disabled. Use this mode when you’re reviewing a mix and want to guarantee that no automation will be written or overwritten.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/220 Auto Read.mp3" /></audio>
+
+<h4 id="auto-touch">Auto Touch</h4>
+<p>In Auto Touch mode, any enable automation parameters begin writing data as soon as a control is changed. As mentioned earlier, this usually involves a touch-sensitive encoder knob or fader on a control surface. New automation data is written until the control is let go and the control returns to the previous automation value. Use this mode when you want to make adjustments to previously written automation.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/221 Auto Touch.mp3" /></audio>
+
+<h4 id="auto-latch">Auto Latch</h4>
+<p>In Auto Latch mode, automation for specific enabled parameters begins writing when the enabled parameter is changed and continues writing throughout playback and stops when playback is stopped. Use this mode if you want to overwrite automation data from a given point and continue writing new data until playback stops. This mode works for parameters that are more continuous in nature like volume and pan rather than momentary in nature like mutes.</p>
+
+<p>[demonstration: 222 Auto Latch</p>
+
+<h4 id="auto-write">Auto Write</h4>
+<p>In Auto Write mode, automation on all enabled parameters begins writing when playback starts. Any previous automation is overwritten and writing of new automation stops when playback stops. Use this mode for setting overall automation or rewriting automation without the need to preserve previously written data.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/223  Auto Write.mp3" /></audio>
+
+<h4 id="touchlatch-and-trim">Touch/Latch and Trim</h4>
+<p>As mentioned earlier, Pro Tools | Ultimate includes two additional automation modes: Touch/Latch and Trim. Touch/Latch is essentially the same as regular Latch mode but with the Volume automation behaving like Touch mode. Trim mode works in conjunction with the other automation modes and changes all of the parameters to show delta values rather than the actual values. Trim mode doesn’t overwrite underlying automation but rather “trims” it proportionately, keeping the relative values in tact.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/224 Touch/Latch and Trim.mp3" /></audio>
+
+<h3 id="writing-automation-selectively">Writing Automation Selectively</h3>
+<p>As discussed earlier, Write mode is most often used for writing to all enabled parameters during playback. The downside of this is that all parameters are written upon playback and continue to writing regardless of whether parameters are being changed or not. Touch and Latch offer a more selective means of writing automation. Sometimes it’s a good idea to select only the parameters you’d like to automate and leave other automation parameters unselected to avoid unwanted automation data from being written or to avoid overwriting data.
+To selectively write automation:</p>
+
+<ol>
+  <li>Choose WINDOW &gt; AUTOMATION or press Command+4 on the numeric keypad</li>
+  <li>Enable the parameters you plan to automate</li>
+  <li>Put the target tracks into the appropriate mode using the tracks’ automation mode selectors</li>
+  <li>Begin playback</li>
+  <li>To begin writing automation, adjust the parameter you wish to automate or touch a control on a touch-sensitive control surface</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/225 Writing Automation Selectively.mp3" /></audio>
+
+<h3 id="playing-automation">Playing Automation</h3>
+<p>After you’ve completed an automation pass, play back the relevant section or entire session. If you’re not happy with the automation, you can either undo the automation or decide to use Auto Touch or Auto Latch to adjust or overwrite the sections in question. If you’re satisfied with the automation, remember to save the session. You might also want to switch tracks to Auto Read.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/226 Playing Automation.mp3" /></audio>
+
+<h3 id="viewing-automation">Viewing Automation</h3>
+<p>As discussed earlier in Chapter 10, track views can display each type of automation parameter that has been written to a track as well as display playlists below a track in the Edit window. For sighted users, these are the areas where automation lines and graphs are displayed. Lines and breakpoints are often edited with various tools. Screen reader users only have access to standard cut, copy and paste as well as the ability to nudge data.</p>
+
+<h3 id="adjusting-breakpoint-automation-data">Adjusting Breakpoint Automation Data</h3>
+<p>Although it’s not possible to individually select breakpoints for editing, it is possible to select a range that might include several breakpoints and move them forward or backward to fine-tune their timing. Since the breakpoints are not part of clips like audio and MIDI, it’s not necessary to separate them before nudging.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/227 Adjusting Breakpoint Automation Data.mp3" /></audio>
+
+<h2 id="cutting-copying-and-pasting-automation-data">Cutting, Copying, and Pasting Automation Data</h2>
+<p>Standard editing commands can be used to work with automation in a track. It’s important to be aware of which track view is being displayed. When using the Paste command, breakpoints are created at the beginning and ending of the paste. If the Cut command was used, breakpoints will also be created at the edges of the cut area.</p>
+
+<h3 id="cutting-automation-versus-deleting-automation">Cutting Automation Versus Deleting Automation</h3>
+<p>Although using Cut or delete will remove automation data from a selected area, the results of each command is very different. When you cut automation, breakpoints are created on either side of the area being cut. This is done in order to preserve the value of automation at those precise points. When you Delete automation, no breakpoints are created. This means that, if there’s no automation beyond the end of the cut point, automation will stay at the previously achieved value. If there is automation present after the end of the cut section, automation will glide to the next breakpoint smoothly.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/228 Cutting Automation Versus Deleting Automation.mp3" /></audio>
+
+<h3 id="using-cut-copy-and-paste-commands-with-automation">Using Cut, Copy, and Paste Commands with Automation</h3>
+<p>Using standard edit commands, you can cut, copy and paste automation data to different locations in the timeline or to other tracks.
+To cut or copy and paste automation:</p>
+
+<ol>
+  <li>Select the automation you’d like to cut or copy</li>
+  <li>Press Command+X to cut or Command+C to copy</li>
+  <li>Move the insertion cursor to the location where you’d like the pasted automation to begin</li>
+  <li>Press Command+V to paste</li>
+</ol>
+
+<p>When using Cut, Copy and Paste for automation, the following rules apply:</p>
+
+<ul>
+  <li>Automation data is always pasted to the same automation playlist from which it originated, even if the corresponding automation playlist is not currently displayed on the target track.</li>
+  <li>When a track view is set to Waveform and audio is cut, copied, or pasted, all corresponding automation data is also cut, copied, and pasted along with the audio.</li>
+  <li>Cutting or copying data from an automation playlist that contains no data (a playlist with a single breakpoint at the beginning of the track) will not add breakpoints to the playlist.</li>
+  <li>Automation data for plug-ins or sends that do not exist on the target track will be ignored when pasted.</li>
+</ul>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/229 Using Cut, Copy, and Paste Commands with Automation.mp3" /></audio>
+
+<h3 id="using-paste-special-mode">Using Paste Special Mode</h3>
+<p>Pro Tools has three “Paste Special” modes, two of which apply to automation and one specifically for MIDI.</p>
+
+<h4 id="paste-special--repeat-to-fill-selection">Paste Special &gt; Repeat to Fill Selection</h4>
+<p>The Repeat to Fill Selection option lets you paste multiple iterations of the copied automation to fill a selected range. This is the same command that lets you also paste audio or MIDI in the same way.
+To use a copied portion of automation throughout a selected range, do the following:</p>
+
+<ol>
+  <li>Set the track view to the type of automation you wish to paste elsewhere</li>
+  <li>Select a range of automation</li>
+  <li>Press Command+C to copy the automation</li>
+  <li>Select a range that you would like to fill with this automation</li>
+  <li>Choose EDIT &gt; PASTE SPECIAL &gt; REPEAT TO FILL SELECTION or press Command+Option+V</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/230 Repeat to Fill Selection.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Paste to Fill Selection: Command+Option+V</li>
+</ul>
+
+<h4 id="paste-special--to-automation-type">Paste Special &gt; to Automation Type</h4>
+<p>When pasting automation, each type of automation is pasted to the matching playlist. In other words, volume data is pasted to the volume playlist, pan data is pasted to the pan playlist, etc. Sometimes you might want to paste the data from one type of automation to the playlist of a different type of automation. For example, you might want to paste data from a volume playlist to a Send Level playlist. To paste between playlists, you need to use the Paste Special function and use the “To Automation Type” menu option.
+To paste data between playlists, do the following:</p>
+
+<p>Set the track view to the automation type you wish to copy
+Select the automation and press Command+C to copy the automation data
+Set the destination track’s view to display the playlist to which you’d like to paste
+Choose EDIT &gt; PASTE SPECIAL &gt; TO AUTOMATION TYPE or press Command+Control+V</p>
+
+<p>For this Paste Special feature to work, the following must be true:</p>
+
+<ul>
+  <li>Every track selected for pasting must be displaying the automation playlist you wish to affect.</li>
+  <li>There must be only one automation playlist on the Clipboard for each target track. (The Paste Special function cannot copy multiple automation playlists for a single track.)</li>
+</ul>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/231 Paste Special to Automation Type.mp3" /></audio>
+
+<h4 id="paste-special-merge">Paste Special Merge</h4>
+<p>The third type of Paste Special command is Merge. You can paste between MIDI-based tracks to combine data. This function is similar to the way the MIDI Merge feature works in real time only, in this case, you’re working with existing data with standard edit commands.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/232 Paste Special &gt; Merge.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Paste Special Merge (with Flo Tools off): Quit VoiceOver and press Option+M then relaunch VoiceOver</li>
+</ul>
+
+<h2 id="removing-automation-from-a-track">Removing Automation from a Track</h2>
+<p>If you find that you’d like to start from scratch with automation, you can delete a single automation type or all automation types on selected tracks.</p>
+
+<h3 id="clearing-automation-for-the-displayed-automation-graph">Clearing Automation for the Displayed Automation Graph</h3>
+<p>As we’ve discussed earlier, by displaying an automation playlist and selecting a range, it’s easy to delete automation. To delete an automation type across an entire track’s length, press Command+A and press Delete.</p>
+
+<h3 id="clearing-automation-for-all-automation-graphs">Clearing Automation for All Automation Graphs</h3>
+<p>If you’d like to clear automation data from all automation playlists on selected tracks, display any automation playlist on all selected tracks, press Command+A to select the entire range and press Control+Delete. This clears all types of automation from the selected tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/233 Removing Automation from a Track.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Select All clips on Selected Tracks in Timeline: Command+A</li>
+</ul>
+
+:ET

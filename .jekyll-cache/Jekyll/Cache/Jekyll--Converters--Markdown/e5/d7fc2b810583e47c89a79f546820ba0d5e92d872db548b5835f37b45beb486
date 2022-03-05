@@ -1,0 +1,239 @@
+I"W;<p>In this chapter, we’ll take a closer look at the “Apply to All” and “Apply to Selected” commands and where they can come in handy. We’ll look at Groups, Folder Tracks and submixes along with other methods of handling more comprehensive track routing. Finally, we’ll discuss final output for media and archiving.</p>
+
+<!--more-->
+
+<h2 id="working-with-track-subsets">Working with Track Subsets</h2>
+<p>For screen reader users, track organization and routing is essential to managing a session, especially as track counts begin to increase over time. It’s important to be able to route signals efficiently and minimize the number of elements through which you might need to navigate. Pro Tools offers global shortcuts and a number of keyboard shortcuts to help you adjust settings on multiple tracks quickly.</p>
+
+<h3 id="using-the-do-to-all-and-do-to-selected-function">Using the Do-To-All and Do-To-Selected Function</h3>
+<p>The global shortcuts “Do-To-All” and “Do-To-Selected” (also referred to as “Apply to All” and “Apply to Selected”) are powerful functions that allow you to quickly apply settings to all tracks or to selected tracks within a session. For example, Option-clicking a mute button will toggle it and set all mutes to the same state. Option-clicking an output path selector and choosing a path will set the track’s output to that path and set all tracks to the that same path. This is the “Do-To-All” function and it applies to the following:</p>
+
+<ul>
+  <li>I/O, bus and send assignment</li>
+  <li>automation mode</li>
+  <li>monitor mode</li>
+  <li>playlist selectors</li>
+  <li>record, solo and mute enable</li>
+  <li>record and solo safes</li>
+  <li>inserting plug-ins</li>
+</ul>
+
+<p>The “Do-To-Selected” function is similar except that it applies only to selected tracks. Pressing Option+Shift while setting or modifying one of the controls listed above applies the adjustment to the same control on all selected tracks. For example, to set the output assignment for all drum tracks to the same aux input, select the drum tracks and use Option+Shift while setting the output of one of the selected tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/234 Using the Do-To-All and Do-To-Selected Function.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Do to All (with Flo Tools Flo Mouse enabled): Option+Accent while focused on a control</li>
+  <li>Do to selected (with Flo Tools Flo Mouse enabled): Option+Shift+Accent while focused on a control</li>
+</ul>
+
+<h3 id="routing-signals-using-paths-and-selectors">Routing Signals Using Paths and Selectors</h3>
+<p>Let’s take a closer look at two other aspects of using paths and selectors.</p>
+
+<h4 id="right-clicking-io-path-selectors">Right-Clicking I/O Path Selectors</h4>
+<p>While focused on an I/O selector, press VO+Shift+M to bring up the right-click menu where, among other items, you’ll find the following helpful options:</p>
+
+<ul>
+  <li>“Select Assignments To” shows and selects all tracks that are currently routed to the selected I/O path..</li>
+  <li>“Show Assignments To” shows all tracks that are currently routed to the selected I/O path..</li>
+  <li>“Show Only Assignments To” shows only tracks that are currently routed to the selected I/O path..</li>
+</ul>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/235 Right-clicking an I/O path selector.mp3" /></audio>
+
+<h4 id="using-modifiers-while-assigning-io-paths">Using Modifiers While Assigning I/O Paths</h4>
+<p>We’ve seen how Option-clicking and Option+Shift-clicking path selectors is used for setting all tracks or selected tracks to the same output. Using some additional modifiers, you can have Pro Tools assign sequential paths or add additional paths to the selection. Add the Command modifier when using the Do-To-All or Do-To-Selected functions to have the path assignments increment starting from the track whose path you’re setting. Add the Control modifier while clicking a path selector to add another path to the current selection. To perform a modified click You’ll need to use either Flo Mouse or a control surface with built-in modifiers.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/236 Using Modifiers While Assigning I/O Paths.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Increment Paths on All Tracks (with Flo Tools Flo Mouse enabled): Command+Option+Accent on a path selector</li>
+  <li>Increment Paths on All Selected Tracks (with Flo Tools Flo Mouse enabled)” Command+Option+Shift+Accent on a path selector</li>
+  <li>Add a Path Selection (with Flo Tools Flo Mouse enabled): Control+Accent on a path selector</li>
+  <li>Add a Path Selection to All Tracks (with Flo Tools Flo Mouse enabled): Control+Option+Accent on a path selector</li>
+  <li>Add a Path Selection to All Selected Tracks (with Flo Tools Flo Mouse enabled): Control+Option+Shift+Accent on a path selector</li>
+</ul>
+
+<h3 id="submixing-tracks">Submixing Tracks</h3>
+<p>Using Auxiliary Inputs to submix tracks is a great way to speed up the process of mixing by establishing internal balances then using fewer faders to balance between various submixes. Some other ways to control multiple tracks with fewer controls are through the grouping of tracks through traditional track groups and with the newer folder tracks feature in Pro Tools.</p>
+
+<h2 id="grouping-tracks">Grouping Tracks</h2>
+<p>There are a couple of ways to work with groups of tracks which we’ll look at below.</p>
+
+<h3 id="working-with-folder-tracks">Working with Folder Tracks</h3>
+<p>There are two types of folder tracks: basic and routing. Basic folder tracks are mostly for organizational purposes although they do include solo and mute functionality. Routing folders have all of the functionality of Aux tracks with the additional benefits of organization that basic folders have. You can open and close folder tracks to show or hide their contents within the Mix and Edit windows as well as the Tracks List. To quickly send selected tracks to a new folder track, press Command+Option+Shift+N.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/237 Working with Folder Tracks.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open/Close Folder Track: Shift+F on either the selected folder track or while any track within folder is selected</li>
+  <li>Move selected Tracks to New Folder: Command+Option+Shift+N</li>
+  <li>Extend Selection Down/Up to All Tracks in the Same Layer in Hierarchy: Control+Option+Shift+Semicolon/P</li>
+</ul>
+
+<h3 id="understanding-mix-and-edit-groups">Understanding Mix and Edit Groups</h3>
+<p>Pro Tools offers three types of groups: Edit groups, Mix groups and Mix/Edit groups.</p>
+
+<p>Edit groups affect the following track parameters:</p>
+
+<ul>
+  <li>Audio and MIDI editing functions</li>
+  <li>Track views</li>
+  <li>Track heights</li>
+  <li>Track timebase settings</li>
+  <li>Elastic Audio plug-in assignments</li>
+  <li>Playlist views</li>
+  <li>Selection-based processing (such as AudioSuite processing and the Consolidate command)</li>
+  <li>Automation editing functions</li>
+</ul>
+
+<p>Any edits applied to an Edit group do not affect any member tracks that are hidden.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Mix groups can be configured to affect the following track parameters, depending on the software version (Pro Tools Standard or Pro Tools</td>
+      <td>Ultimate) and the selected group attributes:</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Main volume level</li>
+  <li>Automation mode settings</li>
+  <li>Track mute settings</li>
+  <li>Track solo settings</li>
+  <li>Send levels</li>
+  <li>Send mute settings</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Mix groups do not affect the following parameters in Pro Tools Standard (Pro Tools</td>
+      <td>Ultimate provides additional attribute settings for each of these options):</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Record enables</li>
+  <li>Track and Send panning</li>
+  <li>Insert controls (plug-ins)</li>
+</ul>
+
+<p>Unlike Edit group behavior, changes made to parameters of a Mix group also affect any member tracks that are hidden.</p>
+
+<h3 id="creating-a-mix-or-edit-group">Creating a Mix or Edit Group</h3>
+<p>To create a group, do the following:</p>
+
+<ol>
+  <li>Select the tracks you’d like to include in the group</li>
+  <li>Choose TRACKS &gt; GROUP or press Command+G</li>
+  <li>In the resulting dialog, type a name for the group and select a group ID from the pop-up menu</li>
+  <li>After reviewing the other settings in the dialog, press the OK button</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/238 Creating a Mix or Edit Group.mp3" /></audio>
+
+<h6 id="key-shortcuts-3">Key shortcuts:</h6>
+
+<ul>
+  <li>Group Selected Tracks: Command+G</li>
+</ul>
+
+<h3 id="activating-deactivating-and-suspending--groups">Activating, Deactivating and Suspending  Groups</h3>
+<p>Groups can be activated or deactivated by clicking on their names within the Groups List. With keyboard focus set to Groups, it’s also possible to activate and deactivate groups by typing the letter of the group ID. You can suspend all groups at once with the “Suspend All Groups” command in the Groups List pop-up menu or by pressing Command+Shift+G.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/239 Activating, Deactivating and Suspending  Groups.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>Enable Groups Keyboard Focus in Edit Window: Command+Option+3</li>
+  <li>Activate/Deactivate Group: Press the letter assigned to a group (while Groups Keyboard Focus is enabled)</li>
+  <li>Toggle Suspend All groups: Command+Shift+G</li>
+</ul>
+
+<h2 id="working-with-groups">Working with Groups</h2>
+<p>You can use groups to manage edits on tracks, making selections, and showing or hiding member tracks. You can modify existing groups to add or remove tracks as needed.</p>
+
+<h3 id="identifying-group-membership">Identifying Group Membership</h3>
+<p>If a track is a member of an active group, the track’s Group ID Indicator displays the group name. If a track belongs to more than one group,  clicking the track’s Group ID Indicator will bring up a list of the groups and their member tracks along with other options.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/240 Identifying Group Membership.mp3" /></audio>
+
+<h3 id="selecting-members-of-a-group">Selecting Members of a Group</h3>
+<p>You can select all members of a group by clicking to the left of the group name in the Groups List Table.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/241 Selecting Members of a Group.mp3" /></audio>
+
+<h3 id="modifying-a-group">Modifying a Group</h3>
+<p>To modify a group:</p>
+
+<ol>
+  <li>Choose “Modify…” from the menu after clicking either on a track’s Group ID Indicator,  or on the Groups List pop-up button or by right-clicking a group’s name. Alternatively, you can press Command+Control+G.</li>
+  <li>In the resulting dialog, choose the ID for the group you wish to modify.</li>
+  <li>Make any changes to the name, type or group membership.</li>
+  <li>Select the ID of any other groups you wish to modify and make your changes.</li>
+  <li>Click OK or press Return.</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/242 Modifying a Group.mp3" /></audio>
+
+<h6 id="key-shortcuts-5">Key Shortcuts:</h6>
+
+<ul>
+  <li>Modify Groups: Command+Control+G</li>
+</ul>
+
+<h3 id="deleting-groups">Deleting Groups</h3>
+<p>You can delete a group by either clicking on a member track’s Group ID Indicator and choosing “Delete… “ or by right-clicking on the group name in the Groups List Table and choosing “Delete…” from the pop-up menu. You can delete multiple groups by activating the groups you want to delete and then choosing ““Delete Active Groups” from the Groups List pop-up button.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/243 Deleting Groups.mp3" /></audio>
+
+<h3 id="using-the-all-group">Using the All Group</h3>
+<p>Pro Tools always includes an “All” group. All tracks belong to the all group with no exceptions. If the All group is active, making a change on one track will apply the same change to all tracks. To enable the All group, press Shift+1 on the numbers row.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/244 Using the All Group.mp3" /></audio>
+
+<h6 id="key-shortcuts-6">Key Shortcuts:</h6>
+
+<ul>
+  <li>Activate/Deactivate All Group: Shift+1</li>
+</ul>
+
+<h2 id="creating-final-media">Creating Final Media</h2>
+<p>Let’s take a look at the last steps when outputting final mixes and then archiving sessions.</p>
+
+<h3 id="creating-a-cd-compatible-bounce">Creating a CD-Compatible Bounce</h3>
+<p>If you plan to send your final mix to a mastering house or a mastering engineer, you should make sure to bounce all mixes at their highest resolution. If you’re creating a final master for delivery on media like audio compact disc, you’ll need to bounce final mixes at 16-bits and 44.1 kHz in which case you’ll need to use a dither plug-in. Pro Tools includes POW-R Dither which should be instantiated on the main Master Fader as the final insert.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/245 Creating a CD-Compatible Bounce.mp3" /></audio>
+
+<h3 id="creating-an-archive">Creating an Archive</h3>
+<p>When it comes time to archive a session, there are 3 main steps:</p>
+
+<ol>
+  <li>Clear all unused files from the session without permanently deleting any audio.</li>
+  <li>Create a copy of the session, including all necessary parent files.</li>
+  <li>If you need to whittle the size of the session folder down to its absolute minimum,  compact the parent files to eliminate unused portions of the files.</li>
+</ol>
+
+<p>We’ve gone through the first two steps earlier in this guide. For the last step, use a copy of the session created using the “Save Copy In…” feature and do the following:</p>
+
+<ol>
+  <li>From the Clips List pop-up menu, choose “Select All.”or press Command+Shift+A</li>
+  <li>From the Clips List pop-up menu choose “Compact…”</li>
+  <li>In the resulting dialog, set any padding you might want to add to the clip boundaries for editing purposes.</li>
+  <li>Press the “Compact” button.</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/246 Creating an Archive.mp3" /></audio>
+:ET

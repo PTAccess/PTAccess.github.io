@@ -1,0 +1,73 @@
+I"@<p>Pro Tools offers a few different ways to import media and other files. Some of the methods are fully accessible while others are more involved. In this chapter we’ll discuss the various ways that data can be imported and managed in Pro Tools.</p>
+
+<!--more-->
+
+<h2 id="pro-tools-software-capabilities">Pro Tools Software Capabilities</h2>
+<p>Most of the material covered in Part II of this guide applies to Pro Tools Standard unless otherwise noted. Some advanced features are only available in Pro Tools | Ultimate.</p>
+
+<h2 id="working-with-digital-video">Working with Digital Video</h2>
+<p>Pro Tools Standard allows you to import one video to a session. It offers nothing in the way of editing capabilities but does allow you to work on audio alongside the video and export the results. With Pro Tools | Ultimate, you can import several video clips and use basic editing commands to cut, copy and paste video clips as you would with audio. While the subject of video is beyond the scope of this guide, let’s take a quick look at the process of importing and exporting video.</p>
+
+<h3 id="setting-up-video-tracks">Setting Up Video Tracks</h3>
+<p>In Pro Tools Standard, a video track is automatically created when you import a video clip. There’s no other way to create a video track using Pro Tools Standard. With Pro Tools | Ultimate, you can create multiple video tracks to which you may import video clips. However, only one video track can play back video at a time.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/132 Setting Up Video Tracks.mp3" /></audio>
+
+<h2 id="using-workspace-browsers">Using Workspace Browsers</h2>
+<p>A workspace browser is a window that accesses a database of files from which files can be dragged to the timeline or auditioned and spotted to an insertion cursor. The browser can also be used to designate read/write permissions for connected hard drives. The Workspace is only somewhat accessible so it’s not ideal for regular file browsing. Let’s take a look at what works well and what doesn’t work so well from a screen reader user’s perspective.</p>
+
+<h3 id="workspace-browser-features">Workspace Browser Features</h3>
+<p>The Workspace features a set of preset buttons as well as a Locations panel and a Browser panel. VoiceOver sees the panels as text areas so items within these panels are somewhat accessible but don’t necessarily behave the way a screen reader would expect.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/133 Workspace Browser Features.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open Workspace: Option+I</li>
+</ul>
+
+<h3 id="soundbase">Soundbase</h3>
+<p>Pro Tools has a workspace known as Soundbase which is a dedicated browser for sound libraries. Soundbase  features tags that allow you to search by categories. Much like a standard workspace browser, the accessibility is limited.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/134 Soundbase.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open Soundbase: Control+Option+I</li>
+</ul>
+
+<h3 id="workspace-browser-functionality">Workspace Browser Functionality</h3>
+<p>Since the workspace and Soundbase browsers are only somewhat accessible, you probably won’t find the need to use them. There are, however, two reasons why you might need to use them.</p>
+
+<h4 id="setting-drive-permissions">Setting Drive Permissions</h4>
+<p>Pro Tools recognizes hard drives as being either playback, recording or transfer volumes. In order to be able to record to a drive it must have recording permissions. Occasionally, you might encounter a situation where Pro Tools complains that a drive to which you haven’t recorded before is seen as a playback volume rather than a recording volume. You’ll need to use the Workspace to change the drive’s permissions.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/135 Setting Drive Permissions.mp3" /></audio>
+
+<h4 id="auditioning-audio-files">Auditioning Audio Files</h4>
+<p>Another situation where you might want to use a workspace browser is when you’d like to audition audio loops within the context of a session, hear the loops at the session’s tempo and insert them into specific locations in the timeline.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/136 Auditioning Audio Files.mp3" /></audio>
+
+<h4 id="auditioning-midi-clips">Auditioning MIDI Clips</h4>
+<p>While it’s not possible to audition MIDI clips in the Workspace Browser, it is possible to audition them from the clips List once you’ve imported them into a session. It’s probably not practical to import MIDI clips purely for auditioning purposes and you’d perhaps be better off using pre-determined patterns through virtual instruments like Boom or Strike or even just program your own clips and loop them. That said, if you do need to audition a MIDI clip that’s already in the Clips List, you can use the Flo Tools “Mark for Drag” command to hear the clip. The sound source of the audition will be the currently selected instrument track.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/137 Auditioning MIDI Clips.mp3" /></audio>
+
+<h3 id="importing-from-workspaces">Importing from Workspaces</h3>
+<p>The Pro Tools documentation often refers to the importing of files from a workspace by dragging to the clips List or Timeline. As this is not accessible, it’s recommended that screen reader users use the standard import commands from the File menu. This does mean the creation of new tracks and then cutting and pasting. The process is a little more time-consuming but it is extremely reliable.</p>
+
+<h2 id="importing-session-data">Importing Session Data</h2>
+<p>The Import Session Data feature allows you to import track data and settings from another Pro Tools session into your current session. To import data from another session, choose FILE &gt; IMPORT &gt; SESSION DATA… or press Option+Shift+O.</p>
+
+<p>]demonstration: 138 Importing Session Data]</p>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Import Session Data: Option+Shift+I</li>
+</ul>
+
+:ET

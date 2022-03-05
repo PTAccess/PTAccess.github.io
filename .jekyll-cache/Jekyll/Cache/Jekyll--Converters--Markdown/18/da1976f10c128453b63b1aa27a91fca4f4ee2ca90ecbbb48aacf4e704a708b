@@ -1,0 +1,130 @@
+I"�7<p>This chapter covers the basic signal routing that is almost always required as part of the mixing process. We’ll take a look at inserts and sends as well as plug-in processing.</p>
+
+<!--more-->
+
+<h2 id="using-inserts-for-effects-processing">Using Inserts for Effects Processing</h2>
+<p>Pro Tools offers up to 10 inserts on audio tracks, instrument tracks, auxiliary inputs and master faders. Inserts are arranged into 2 groups of 5 (Inserts A through E and Inserts F through J). Inserts can be assigned to plug-ins and bus paths or to external hardware devices like traditional insert jacks on a console. All processing occurs in series from the first to last insert before reaching the track’s volume fader.</p>
+
+<h3 id="inserts-on-audio-tracks-and-aux-inputs">Inserts on Audio Tracks and Aux Inputs</h3>
+<p>Inserts on audio and auxiliary tracks are pre-fader. When using inserts for processing, it’s important to keep track of input and output levels. We’ve discussed the importance of levels while recording but processing of recorded audio or audio being routed through an auxiliary input can sometimes cause the processed audio to increase in level resulting in clipped signals. For the internal mixer (whose resolution is extremely high) it’s not a problem but, for plug-ins that sometimes emulate the headroom of vintage hardware processors, this can be a problem. By periodically monitoring the level and peak meters throughout the mixing process, such gain structure problems can be avoided.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/200 Inserts on Audio Tracks and Aux Inputs.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Speak Tracks Whose Level Has Reached 0 Decibels (with Flo Tools): Option+Shift+0</li>
+</ul>
+
+<h3 id="inserts-on-master-faders">Inserts on Master Faders</h3>
+<p>Unlike inserts on audio and auxiliary input tracks, inserts on master tracks are post-fader. This means that any excessive gain incurred as a result of plug-in processing on the master fader can be negotiated by lowering the volume fader of the master track, thus lowering the signal input before the plug-in processing.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/201 Inserts on Master Faders.mp3" /></audio>
+
+<h3 id="plug-in-inserts">Plug-In Inserts</h3>
+<p>Most of the time, inserts are used for plug-in processing. Unlike traditional hardware inserts on a mixing console, when a plug-in is instantiated within an insert, there’s no need to worry about signal routing. The input and output routing of the plug-in is automatic. Input and output levels can almost always be adjusted from within the plug-in itself.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/202 Plug-In Inserts.mp3" /></audio>
+
+<h3 id="hardware-inserts">Hardware Inserts</h3>
+<p>You can use the inserts in Pro Tools to route signals through an external audio interface to a hardware processor and back into Pro Tools. This scenario is very much like traditional insert processing on an analog mixing console. In this case, you’d need to have a multichannel audio interface with enough inputs and outputs and make sure that the cable connections to and from the interface and signal processor are properly configured. Naturally, you’ll need to keep track of analog signal levels as you make adjustments to the external device.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/203 Hardware Inserts.mp3" /></audio>
+
+<h2 id="using-sends-and-returns-for-effects-processing">Using Sends and Returns for Effects Processing</h2>
+<p>Pro Tools offers up to 10 sends per track. Sends can be either pre or post fader and are most often used for routing or combining signals to send to a plug-in. Sends can also be used to create submixes for headphones while recording or overdubbing.</p>
+
+<h3 id="creating-a-send">Creating a Send</h3>
+<p>Sends can route a signal to either a physical output or a bus. Use physical outputs if you’re routing a submix to an external processor like a hardware reverb unit. Use a bus output for routing submixes internally like a reverb plug-in on an auxiliary input track. Both types of assignments include mono and stereo options. To create a send, click on a track’s send selector and choose an output type and channel width. You can also choose to send directly to an existing track or create a new track with corresponding bus assignments already in place.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/204 Creating a Send.mp3" /></audio>
+
+<h3 id="setting-the-send-level">Setting the Send Level</h3>
+<p>Use the Send Level slider in the Send window to set the level of the signal being sent from the selected track.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/205 Setting the Send Level.mp3" /></audio>
+
+<h3 id="changing-the-default-send-level-preference">Changing the Default Send Level Preference</h3>
+<p>The default setting for send level on new sends is “minus infinity.” This is meant to prevent unintentional overloads in case of a feedback loop because of faulty routing. If you’d rather not have to manually raise the send level every time you create a new send, you can change the default setting in the Setup area of the Mixing tab in the Preferences dialog.</p>
+
+<p>demonstration: 206 Changing the Default Send Level Preference]</p>
+
+<h3 id="send-display-options">Send Display Options</h3>
+<p>Sends have a couple of options for what is displayed in the sends areas of the Mix and Edit window. At the time of this publication, any changes made to these settings don’t affect what VoiceOver sees. In other words, if you set the setting to display Send A only, visually the display changes and shows only Send A and a few controls from the Send window. However, VoiceOver continues to see all of the sends associated with the area and it appears exactly the same no matter which individual send is chosen.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/207 Send Display Options.mp3" /></audio>
+
+<h3 id="creating-a-return">Creating a Return</h3>
+<p>If you create a send for signal processing, you’ll need to return the processed signal to a destination. Auxiliary input tracks are usually used for this purpose. Create an auxiliary input track and choose the appropriate input path (from an interface channel if you’re bringing a signal back in from an external hardware processor or bus if you’re using a plug-in).</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/208 Creating a Return.mp3" /></audio>
+
+<h3 id="working-with-solo-safe-mode">Working With Solo Safe Mode</h3>
+<p>If you’d like to set an aux input so that its signal doesn’t implicitly mute when you’re soloing a track that is feeding a plug-in instantiated on that aux input, you can set the track’s solo button to “solo safe.” When solo safe is enabled, the auxiliary input track will continue to pass signal through no matter which track is being soloed. You might also find yourself needing to solo a MIDI track that’s feeding either an instrument track or an aux input track hosting a plug-in or a return from a hardware synth. Soloing the MIDI track would end up muting the instrument or aux track’s sound. Solo safe is the solution for this kind of situation. To solo safe a track, Command-click its solo button.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/209 Working With Solo Safe Mode.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Solo-Safe a Track (with Flo Tools): Command+Accent on a solo button</li>
+</ul>
+
+<h2 id="working-with-sends">Working with Sends</h2>
+<p>Let’s take a look at some more options for working with sends.</p>
+
+<h3 id="using-the-send-window">Using the Send Window</h3>
+<p>The Send view of the Output window shows all of the available settings for the chosen send. A few of the options are also available from the right-click menu of the Send Assignment button in the mixer or track strips.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/210 Using the Send Window.mp3" /></audio>
+
+<h3 id="moving-and-copying-sends">Moving and Copying Sends</h3>
+<p>To move a send from one slot to another, you’ll need to use conventional drag &amp; drop techniques. As discussed earlier, you’ll need to use the mouse pointer so preparing for the process is the key to success. To copy a send to another location, you’ll need to Option-click the send assignment before dragging. VoiceOver doesn’t support modified clicks and Flo Tools doesn’t currently have a “mouse down” feature for modified clicks so the only way to achieve this kind of copying of a send is to use the NumPad Commander along with an Avid control surface. Otherwise, you can always just recreate a send on any track or selected tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/211 Moving and Copying Sends.mp3" /></audio>
+
+<h3 id="changing-and-removing-sends">Changing and Removing Sends</h3>
+<p>You can change a send either in the Send window by selecting a new path or from the mixer/track strip by clicking on the Send Selector and choosing a new path. If you want to remove the path, choose “None” from either location.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/213 Changing and Removing Sends.mp3" /></audio>
+
+<h2 id="using-plug-ins">Using Plug-Ins</h2>
+<p>Although there are a tremendous number of plug-ins available, they can be divided into two basic categories: gain-based (or amplitude domain) and time-based (or time domain). Gain-based plug-ins tend to be used directly within a track while time-based plug-ins are generally applied to several tracks at a time while using an auxiliary input to blend in the processed signal.</p>
+
+<h3 id="using-gain-based-processors">Using Gain-Based Processors</h3>
+<p>Gain-based plug-ins like EQ and dynamics are generally instantiated directly on a track and used to apply the full process to 100% of the signal. There are, however, some plug-ins that offer the option to mix in part of the original unaffected signal. Also, it is possible to apply this type of processing to a range of tracks by creating a submix like an aux input or folder track and applying the process to only the submix to conserve CPU resources.</p>
+
+<h3 id="using-time-based-processors">Using Time-Based Processors</h3>
+<p>Time-based plug-ins like reverbs and delays are generally instantiated on auxiliary or folder tracks and used to apply processing to a range of tracks. The processed signal is then mixed in with the source tracks’ original dry signal. Much like the gain-based plug-ins mentioned above, time-based plug-ins can also be instantiated directly on a track in certain cases. With such a scenario, it can be more tedious to deal with parameters to balance the wet/dry mix but, if only one track will be processed and it’s likely that you can commit to a sound early on, it might be the right approach to take.</p>
+
+<h3 id="using-send-level">Using Send Level</h3>
+<p>When using Sends for processing a single track’s signal, setting the volume of the auxiliary track is usually enough to get the right blend between the two sources. When sending signals from multiple tracks to a plug-in, you might want to set different levels for the various sources before the signal hits the plug-in. For example, you might sen the individual elements from a drum kit to a reverb but you might want only a bit of the kick signal mixed in with the rest of the drums when sending the signal to the reverb. Use the send level to adjust the amount of signal being routed to the send’s destination.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/213 Using Send Level.mp3" /></audio>
+
+<h3 id="using-the-plug-in-window">Using the Plug-In Window</h3>
+<p>Let’s take a closer look at the Plug-In window and its controls.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/214 Using the Plug-In Window.mp3" /></audio>
+
+<h2 id="master-fader-tracks">Master Fader Tracks</h2>
+<p>Master fader tracks include inserts for processing. They have no sends because they act more like a destination for control rather than a means of routing. They can control the level of physical outputs as well as busses.</p>
+
+<h3 id="uses-of-master-faders">Uses of Master Faders</h3>
+<p>Master fader tracks can be used to</p>
+
+<ul>
+  <li>Control and process output mixes</li>
+  <li>Monitor and meter an output level (like a bus or hardware output) to guard against clipping</li>
+  <li>Control submix levels</li>
+  <li>Control effects send levels</li>
+  <li>Control levels on submasters (bussed tracks)</li>
+  <li>Apply dither or other inserts to all tracks sent to a common output or bus</li>
+</ul>
+
+<h3 id="creating-master-faders">Creating Master Faders</h3>
+<p>You can create any number of master fader tracks using the New Track dialog. Once created, you’ll need to assign an output path. Master faders can only be assigned to an unused path. Once you’ve assigned a path to a master fader, that path is no longer available to assign to a different master fader. You can monitor and adjust the levels for the path and see the output levels reflected in the level and peak meters on the master fader track. Regardless of the Pre-Fader Metering setting, master fader track meters always display post fader values.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/215 Creating Master Faders.mp3" /></audio>
+
+:ET

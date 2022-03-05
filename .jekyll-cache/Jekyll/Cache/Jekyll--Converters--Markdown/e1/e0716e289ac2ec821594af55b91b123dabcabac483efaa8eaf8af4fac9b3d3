@@ -1,0 +1,98 @@
+I"[<p>This chapters covers how to prepare track for audio recording, record audio, and manage recorded audio.</p>
+
+<!--more-->
+
+<h2 id="before-recording">Before Recording</h2>
+<p>To avoid potential problems with your session file, make sure you have enough available space on the drive where your session folder resides before recording.</p>
+
+<h3 id="disk-usage-window">Disk Usage Window</h3>
+<p>The Disk Usage window in Pro Tools is useful when you need to quickly assess the available space on hard drives connected to your system. A table in the window lists drive names along with their capacities, available space (in both gigabytes/terabytes and as a percentage) as well as total recording time in continuous minutes.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/39 Disk Usage window.mp3" /></audio>
+
+<h2 id="preparing-to-record">Preparing to Record</h2>
+
+<h3 id="checking-hardware-connections">Checking Hardware Connections</h3>
+<p>When preparing to record audio, make sure the cable from the microphone or instrument is connected to the desired input channel. Remember that some interfaces have hardware switches to select between microphone and instrument input jacks as well as amplifier stages.</p>
+
+<h3 id="setting-input-paths">Setting Input Paths</h3>
+<p>Make sure that the input path of the track on which you intend to record is set to the channel into which your microphone or instrument is plugged.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/40 Setting Input Path.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<p>For Flo Tools users, the letter T pressed once while focused on a track with the Inspector will speak the current input and double-tapping will bring up the input path selector menu</p>
+
+<h3 id="record-enabling-tracks">Record-Enabling Tracks</h3>
+<p>To record-enable an audio track, click its Track Record Enable button or, with the track selected, press Shift+R. If you’re using a control surface, click the track’s record enable button.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/41 Record-Enabling Tracks.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Record-Enable Selected Tracks: Shift+R</li>
+  <li>With Flo Tools Inspector, pressing R while focused on a track reports the track record arm status and double-tapping toggles the track record arm state</li>
+</ul>
+
+<h3 id="quick-troubleshooting-tip-for-playback">Quick Troubleshooting Tip for Playback</h3>
+<p>If you’re having trouble getting a signal to pass from your source to a record-enabled track, a quick way to test your playback is to generate a clip temporarily to see if you’re getting a signal from Pro Tools. To do this, select a range and press Control+Option+Shift+3 (on the numbers row). Pro Tools will render a 1 kHz sine wave audio clip within the selected range. Make sure the track is not armed and press the Spacebar to play. If you don’t hear a tone, there’s a problem with your playback system. If you do hear a tone, there’s either a problem with the input assignment or you’re plugged into a different channel. When you’re done troubleshooting, remember to either undo the rendering of the clip by pressing Command+Z or deleting the clip.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/42 Rendering a Test Tone.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Generate Sine Wave Within Selected Range: Control+Option+Shift+3</li>
+</ul>
+
+<h3 id="creating-a-click-track">Creating a Click Track</h3>
+<p>To create a click track in your session, choose Track&gt;Create Click Track. Pro Tools creates an aux input track with the Click II plug-in already instantiated on Insert A.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/43 creating a Click Track.mp3" /></audio>
+
+<h2 id="recording-and-managing-audio">Recording and Managing Audio</h2>
+
+<h3 id="recording">Recording</h3>
+<p>The Transport window and the Transport Cluster within the Edit window both display standard transport controls. While it’s possible to click these buttons and use the controls as sighted users would, it’s far more efficient to use a control surface or keyboard commands. There are 3 ways to commence recording via keyboard commands:</p>
+
+<ol>
+  <li>Press Command+Spacebar</li>
+  <li>Press 3 on the numeric keypad</li>
+  <li>Press F12</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/44 Entering Record.mp3" /></audio>
+
+<h6 id="key-shortcuts-3">Key Shortcuts:</h6>
+
+<ul>
+  <li>Enter Record Mode: Command+Space Bar</li>
+  <li>Enter Record Mode: 3 on the numeric keypad</li>
+  <li>Enter Record Mode: F12</li>
+  <li>Toggle Auto-Input/Input-Only Monitoring: Option+K</li>
+  <li>With Flo Tools Inspector, press the letter I once to speak the focused track’s input monitor status and double-tap to toggle</li>
+  <li>For Flo Tools users, pressing Option+Shift+I speaks all input monitor-enabled tracks and double-tapping turns off input monitoring for all tracks</li>
+</ul>
+
+<h2 id="organizing-after-recording">Organizing After Recording</h2>
+<p>When you’re done recording, play back the session to review the performance. If you don’t hear the newly recorded material, make sure Pro Tools is set to Auto Input by pressing Option+K to toggle between Auto Input and Input Only monitoring. Alternatively, you can disarm the track.</p>
+
+<h3 id="organize-audio-files-and-clips">Organize Audio Files and Clips</h3>
+<p>When recording audio into a session file, Pro Tools creates whole files with names based on the names of the tracks that are being recorded. The files appear in the Clips List in the Edit window. In addition to the file name, an underscore and “take number” is appended. A whole file within the Clips List is also known as a “clip.” If a file is edited, subsets of the whole file are generated as new clips. All whole files are clips but not all clips are whole files. A clip that has been edited from a whole file is a pointer that references part of a whole audio file. When clips are edited, Pro Tools appends an edit ID to the clip’s name.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/45 Clips and Whole Files in the Clips List.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>Rename Selected Clips: Command+Shift+R</li>
+  <li>Clear Selected Clips: Command+Shift+B</li>
+</ul>
+
+<h3 id="removing-audio-clips-and-deleting-audio-files">Removing Audio Clips and Deleting Audio Files</h3>
+<p>When you select an audio clip or a range of clips in the timeline, cutting or deleting will remove the clips from the timeline but not from the Clips List. Choosing “Clear” when right-clicking on a clip within the Clips List will remove a clip from the Clips List and the session itself but will not delete the file from the Audio Files folder within the session folder. When you choose “Clear” while focused on a whole file, Pro Tools prompts you with an option to simply remove any reference to the whole file from the session or to delete the audio file from disk.</p>
+
+<p>[demonstration: 46 Deleting Clips and Whole Files</p>
+:ET

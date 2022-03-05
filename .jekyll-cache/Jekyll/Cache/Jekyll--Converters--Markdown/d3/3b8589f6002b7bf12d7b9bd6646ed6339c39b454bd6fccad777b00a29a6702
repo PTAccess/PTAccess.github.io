@@ -1,0 +1,240 @@
+I"o0<p>This chapter provides detailed instructions on how to configure Mac OS for Pro Tools and Pro Tools for use with VoiceOver plus recommended settings for use with Flo Tools.</p>
+
+<!--more-->
+
+<h2 id="optimizing-mac-os">Optimizing Mac OS</h2>
+<h3 id="optimize-energy-saver">Optimize Energy Saver</h3>
+<p>This optimization will free up system resources as well as prevent the computer from going to sleep or standby mode which can cause audio dropouts with Pro Tools software and hardware.</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click ‘Energy Saver’.</li>
+  <li>Do one of the following (available option depends on your computer model).
+ If present, set the Computer Sleep slider to “Never”
+ Otherwise, check the box that says “Prevent computer from sleeping automatically when the display is off.”</li>
+  <li>Un-check the box for “Put hard disks to sleep when possible.”</li>
+  <li>Un-check the box for “Enable Power Nap”</li>
+</ol>
+
+<h3 id="turn-off-wi-fi">Turn off Wi-Fi</h3>
+<p>If your computer is equipped with Bluetooth wireless and/or Wi-Fi, these may need to be disabled for Pro Tools to work correctly.  In addition to freeing up system resources, disabling these can help resolve DAE errors -6085, -6086 and -6101.</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click ‘Network’.</li>
+  <li>On the left hand sidebar, click on Wi-Fi.</li>
+  <li>Click on the button that says Turn Wi-Fi Off.</li>
+</ol>
+
+<h3 id="disable-filevault-protection">Disable FileVault protection</h3>
+<p>This optimization will allow your hard drive to work more efficiently with Pro Tools and can prevent DAE Error -9035 from occurring.</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click ‘Security &amp; Privacy’.</li>
+  <li>Click on the ‘FileVault’ tab.</li>
+  <li>In this window find where it states: “FileVault protection is (on/off) for the hard disk…”.</li>
+  <li>If FileVault is on, click the button to “Turn Off FileVault.”</li>
+</ol>
+
+<h3 id="update-ilok-drivers">Update iLok Drivers</h3>
+<p>This can help resolve problems launching Pro Tools and some plug-in authorization issues.</p>
+
+<ul>
+  <li>Visit the iLok website at <a href="http://www.ilok.com">www.ilok.com</a>.</li>
+  <li>Download and install the iLok License Manager.</li>
+</ul>
+
+<h3 id="turn-off-ilok-cloud">Turn Off iLok Cloud</h3>
+
+<p>Pro Tools uses iLok authorization which offers the option to access licenses from iLok Cloud rather than an iLok key. While iLok Cloud seems to work fine for plug-in authorization, the fact that Pro Tools itself requires iLok authorization to run seems to cause Pro Tools to slow down VoiceOver performance significantly for some users. It’s recommended that your Pro Tools license be activated to an iLok key rather than iLok Cloud.</p>
+
+<h3 id="automatic-updates">Automatic Updates</h3>
+<p>Some updates to your Mac software can cause conflicts with Pro Tools.  Therefore, it is suggested to disable the automatic update functionality within the operating system. If there is an update that you need, you can manually update your Mac software by clicking on the Apple menu and choosing Software Update.</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click ‘Software Update.</li>
+  <li>Make sure the box labeled “Automatically keep my Mac up to date” is unchecked.</li>
+</ol>
+
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+<p>You can disable or reassign Mac OS keyboard shortcuts that conflict with Pro Tools keyboard shortcuts. The following list includes several common Mac keyboard shortcuts that, depending on the make and model of your Mac, may also be used by Pro Tools:</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click Keyboard.</li>
+  <li>Click the Keyboard Shortcuts tab.</li>
+</ol>
+
+<h4 id="under-the-launchpad--dock-category">Under the Launchpad &amp; Dock category:</h4>
+
+<ul>
+  <li>Uncheck Turn Dock Hiding On/Off</li>
+</ul>
+
+<h4 id="under-the-mission-control-category">Under the Mission Control category:</h4>
+<ul>
+  <li>Uncheck Mission Control</li>
+  <li>Uncheck Application windows</li>
+  <li>Uncheck Mission Control &gt; Switch to Desktop</li>
+  <li>Uncheck Mission Control &gt; Move left a space</li>
+  <li>Uncheck Mission Control &gt; Move right a space</li>
+</ul>
+
+<h4 id="under-the-keyboard-category">Under the Keyboard category:</h4>
+<ul>
+  <li>Uncheck Move focus to the window drawer</li>
+</ul>
+
+<h4 id="under-the-input-sources-category">Under the Input Sources category:</h4>
+<ul>
+  <li>Uncheck Select Next Source in Input Menu</li>
+  <li>Uncheck Select the Previous Input Source</li>
+</ul>
+
+<p>If you sometimes use a keyboard layout other than U.S. (English), you can leave these shortcuts enabled but you’ll need to define a different shortcut for each as Pro Tools uses the predefined shortcuts in this table.</p>
+
+<h4 id="under-the-services-category">Under the Services category,:</h4>
+
+<ul>
+  <li>Uncheck Files and Folders &gt; Send File To Bluetooth Device</li>
+  <li>Uncheck 
+ing &gt; Search With Google</li>
+  <li>Uncheck Searching &gt; Spotlight</li>
+</ul>
+
+<h4 id="under-the-spotlight-category">Under the Spotlight category:</h4>
+
+<ul>
+  <li>Uncheck Show Spotlight search</li>
+  <li>Uncheck Show Finder Search Window</li>
+</ul>
+
+<h4 id="under-the-app-shortcuts-category">Under the App Shortcuts category:</h4>
+
+<ul>
+  <li>Uncheck Show Help menu</li>
+</ul>
+
+<h3 id="using-f1-f2-etc-keys-as-standard-function-keys">Using F1, F2, etc. keys as standard function keys</h3>
+<p>Both Pro Tools and Flo Tools use the Function Keys for certain shortcuts. Your system may be configured to have the Function Keys act as media control keys by default. To make sure the F keys behave as normal Function Keys:</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click Keyboard.</li>
+  <li>Under the Keyboard tab, check the “Use F1, F2, etc. keys as standard function keys” checkbox.</li>
+</ol>
+
+<h3 id="speak-selected-text-option">Speak Selected Text Option</h3>
+
+<p>Occasionally, when VoiceOver doesn’t recognize an element that’s selected within an inaccessible area of a dialog or window, it’s sometimes helpful to use the “Speak Selected Text When the Key is Pressed” feature in MacOS. You can set a custom keyboard shortcut to trigger this function.</p>
+
+<ol>
+  <li>Open System Preferences.</li>
+  <li>Click Accessibility.</li>
+  <li>Under the Spoken Content category in the Accessibility Features table, check the “Speak Selection” checkbox.</li>
+  <li>Click the Options button to set the shortcut.</li>
+  <li>In the resulting dialog, press the key combination you’d like to use (Option+Escape is a popular choice).</li>
+  <li>Navigate with VoiceOver to click the OK button.</li>
+</ol>
+
+<h2 id="setting-up-voiceover">Setting Up VoiceOver</h2>
+<p>VoiceOver will work with Pro Tools out of the box. There are, however, a few settings that are highly recommended. Open the VoiceOver Utility with VO+f8 and review the following settings:</p>
+
+<h3 id="under-the-general-category">Under the General category</h3>
+
+<ul>
+  <li>Choose “Caps Lock” for “Keys to Use as the VoiceOver Modifier”.</li>
+  <li>Check the “Allow VoiceOver to be controlled by AppleScript” checkbox.</li>
+</ul>
+
+<h3 id="under-the-navigation-category">Under the Navigation category</h3>
+
+<ul>
+  <li>Select “Standard” in the  Grouping Behavior pop-up button.</li>
+  <li>Select “Follows VoiceOver Cursor” in the Mouse Pointer pop-up button.</li>
+</ul>
+
+<h3 id="under-the-visuals-category">Under the Visuals category</h3>
+
+<ul>
+  <li>In the Cursor tab, set the VoiceOver Cursor Magnification slider to its lowest setting. This particular setting affects those who use macros which rely on image recognition. If you use screen magnification, you’ll need to be aware that any macros that use image recognition to find UI elements will require you to set the magnification to its lowest setting to work correctly while executing those macros.</li>
+</ul>
+
+<h2 id="setting-up-pro-tools">Setting Up Pro Tools</h2>
+<p>The following settings in Pro Tools are critical for navigation and editing.</p>
+
+<ul>
+  <li>Uncheck Options menu &gt; Dynamic Transport</li>
+  <li>Check Options menu &gt; Link Timeline and Edit Selection</li>
+  <li>CheckOptions menu &gt; Link Track and Edit Selection</li>
+</ul>
+
+<h2 id="settings-for-pro-tools-preferences">Settings for Pro Tools Preferences</h2>
+<p>The following settings in the Pro Tools Preferences dialog are generally recommended for VoiceOver users. While these settings are not necessarily required, they are a good starting point and some settings might need to be changed from time to time, depending upon one’s needs. They are listed in the order in which they appear in each tab of the Preferences dialog.</p>
+
+<h3 id="display-tab">Display tab</h3>
+
+<ul>
+  <li>In the Basic group, uncheck the “Track Position Numbers Stay with Hidden Tracks” checkbox.</li>
+  <li>Check the “Function” checkbox for Tooltips.</li>
+  <li>Check the “Details” checkbox for Tooltips.</li>
+</ul>
+
+<h3 id="operation-tab">Operation tab</h3>
+
+<ul>
+  <li>In the Transport group, check the “Edit Insertion Follows Scrub/Shuttle” checkbox.</li>
+  <li>Check the “Audio During Fast Forward/Rewind” checkbox.</li>
+  <li>Check the “Play Start Marker Follows Timeline Selection” checkbox.</li>
+</ul>
+
+<h3 id="editing-tab">Editing tab</h3>
+
+<ul>
+  <li>In the Clips group, check the “Clip List Selection Follows Edit Selection” checkbox.</li>
+  <li>Check the “Edit Selection Follows Clip List Selection” checkbox.</li>
+</ul>
+
+<h3 id="mixing-tab">Mixing tab</h3>
+
+<ul>
+  <li>In the Setup group, uncheck the Sends Default to “-INF” checkbox.</li>
+  <li>In the Automation group, uncheck the “Plug-in Controls Default to Auto-Enabled” checkbox.</li>
+  <li>Uncheck the “Include Control Changes in Undo Queue” checkbox.</li>
+</ul>
+
+<h3 id="metering-tab">Metering tab</h3>
+
+<ul>
+  <li>In the Peak/Clip group, select the “3 Seconds” radio button for Peak Hold.</li>
+  <li>Select the “Infinite” radio button for Clip Indication.
+    <ul>
+      <li>Note that the radio buttons are actually arranged in two columns beneath “Peak Hold” and “Clip Indication” so reading straight down with VoiceOver from each works best.</li>
+    </ul>
+  </li>
+  <li>In the Display group, check the “Show Track Gain Reduction Meter” checkbox.</li>
+  <li>Select the “All - Summed” radio button for Gain Reduction Meter Type.</li>
+</ul>
+
+<h2 id="optimizing-pro-tools-for-flo-tools">Optimizing Pro Tools for Flo Tools</h2>
+<p>For all functions of Flo Tools to work as expected, it is recommended to apply the following settings and window configurations  in Pro Tools. Some of these items were already listed above.</p>
+
+<ul>
+  <li>In VoiceOver Utility under the General category, check the “Allow VoiceOver to be controlled with AppleScript” checkbox.</li>
+  <li>Go to System Preferences &gt; Keyboard pane and, under the input sources, make sure “US”  is enabled.</li>
+  <li>The Mix and Edit windows should both be open at all times.</li>
+  <li>In the Pro Tools Preferences dialog &gt; Display tab &gt; Basics group, check the “Function” and Details” checkboxes for Tooltips.</li>
+  <li>In the toolbar menu of the edit window, the “Transport”, “midi Controls”, and “expanded transport” settings should be checked.</li>
+  <li>Track Heights should be set to “medium” for optimal Flo Tools performance.</li>
+</ul>
+
+<h2 id="miscellaneous-optimizations">Miscellaneous Optimizations</h2>
+
+<h3 id="komplete-kontrol-and-fb360">Komplete Kontrol and FB360</h3>
+
+<p>Some users of Native Instruments products have experienced conflicts with the FB360 Spatial Workstation plug-in interfering with the speech output of the Komplete Kontrol plug-in. If you have trouble turning on Accessibility Mode in Komplete Kontrol, try removing the FB360 plug-ins from your Plug-ins folder. Go to:
+Macintosh HD/Library/Application Support/Avid/Audio/Plug-ins 
+and delete any plug-in whose name begins with “FB360.” Note that the FB360 plug-ins are part of the standard Pro Tools installation and will be reinstalled with every Pro Tools version update. If your system happens to be one of those that has a conflict between Komplete Kontrol and FB360, make sure to check for and remove the FB360 plug-ins after any Pro Tools update.</p>
+:ET

@@ -1,0 +1,215 @@
+I"JG<p>In this chapter, we’ll cover some more ways to work with clips through clip groups, clip looping and managing clips with the Clips List. We’ll also take a look at processing clips using AudioSuite plug-ins.</p>
+
+<!--more-->
+
+<h2 id="working-with-clip-groups">Working with Clip Groups</h2>
+<p>When working with clips, it’s common to end up with multiple sub-clips. If you find yourself with a large number of clips that you’d like to copy and paste for repeated sections or for experimentation, it’s sometimes helpful to consolidate the clips by selecting them and either choosing EDIT &gt; CONSOLIDATE CLIP  or press Shift+Option+3 on the numbers row. This action does have the potential down side of creating a new clip with no option to further adjust any edits to the original clips. A more flexible option is to use clip groups. A clip group is a combination of any audio, MIDI or video clips that are joined into a single clip to facilitate easy arranging of material across the timeline. Clip groups can include empty space alongside selected clips or ranges of audio and can stretch across adjacent tracks or even noncontiguous tracks. Clip groups can also contain any number of nested clip groups.</p>
+
+<h3 id="creating-clip-groups">Creating Clip Groups</h3>
+<p>When creating a clip group, the following rules apply:</p>
+
+<ol>
+  <li>The size of the selection determines the size of the clip group</li>
+  <li>The selection can start or end on any clip boundary or in the middle of a clip and can include empty space</li>
+  <li>Selections starting or ending within a clip will create a separation at the boundaries of the selection when the clip group is created</li>
+  <li>Clip groups will include all clips between the first and last selected clip on a track</li>
+</ol>
+
+<p>To create a clip group, make a selection on one or more tracks then choose CLIP &gt; GROUP or press Command+Option+G.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/183 Creating Clip Groups.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Group Clips: Command+Option+G</li>
+</ul>
+
+<h3 id="ungrouping-clips">Ungrouping Clips</h3>
+<p>To ungroup clips, select the clip group and choose CLIP &gt; UNGROUP or press Command+Option+U. If the clip group has nested clip groups, the command will ungroup only the top level of the clip group. To simultaneously ungroup all the nested groups within a clip group, select the clip group and choose CLIP &gt; UNGROUP ALL.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/184 Ungrouping Clips.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Ungroup Clips: Command+Option+U</li>
+</ul>
+
+<h3 id="regrouping-clips">Regrouping Clips</h3>
+<p>The Regroup command undoes the last Ungroup command and restores the individual member clips back to their previous grouped state. This lets you ungroup a clip, edit it and then quickly regroup it to work on higher level arranging functions. To regroup clips, select any of the clips from the ungrouped clip group and choose CLIP &gt; REGROUP or press Command+Option+R. If you previously used the Ungroup All command to ungroup nested clip groups, the Regroup command will restore the clip group along with all of the nested clip groups.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/185 Regrouping clips.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Regroup Clips: Command+Option+R</li>
+</ul>
+
+<h3 id="clip-groups-in-the-clip-list">Clip Groups in the Clip List</h3>
+<p>The Clips List displays clip groups and appends them with extra letters to identify the clip group type.</p>
+
+<p>]demonstration: 186 Clip Groups in the Clip List]</p>
+
+<h2 id="clip-looping">Clip Looping</h2>
+<p>Audio clips, MIDI clips and clip groups can be repeated within the timeline by using the Clip Looping command. Clip looping is similar to the Repeat and Duplicate commands but offers more flexibility.</p>
+
+<h3 id="working-with-clip-loops">Working with Clip Loops</h3>
+<p>Clip Loops consist of a source clip along with one or more copies of the source clip repeated and attached to the source clip but represented as one longer clip with all of the repeated information contained within. When creating clip loops, you can specify the number of repeats, repeat to fill a designated length or repeat to the next clip or session end. Once created, a clip loop can be edited much like a standard clip. You can use clip looping across multiple tracks by grouping the clips first and applying clip looping to the clip group.</p>
+
+<h3 id="creating-clip-loops">Creating Clip Loops</h3>
+<p>To use clip looping, select a clip or clip group and choose CLIP &gt; LOOP or press Command+Option+L. In the resulting Clip Looping dialog, choose the appropriate settings.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/187 Creating Clip Loops.mp3" /></audio>
+
+<h3 id="modifying-clip-loop-settings">Modifying Clip Loop Settings</h3>
+<p>You can modify the settings of a looped clip by selecting the clip and once again choosing the Loop command from the clip menu or pressing Command+Option+L.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/188 Modifying Clip Loop Settings.mp3" /></audio>
+
+<h3 id="editing-clip-loops">Editing Clip Loops</h3>
+<p>As mentioned earlier, looped clips can be edited much like standard clips. You can trim a looped clip or trim either boundary just as if it were a regular clip.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/189 Editing Clip Loops.mp3" /></audio>
+
+<h3 id="considerations-for-working-with-clip-loops">Considerations for Working with Clip Loops</h3>
+<p>For the most part, working with clip loops is fairly straightforward. While experimenting with clip loops , it might be helpful to keep the following in mind:</p>
+
+<ul>
+  <li>Looping can be applied only to an entire source clip or clip group. To loop a selection that includes only part of a clip, you must either trim the clip to the selection or capture the selection as a clip first</li>
+  <li>Looping cannot be applied to multiple clips on the same track. To loop a selection that includes multiple clips, you must first create a clip group from the selection.</li>
+  <li>Creating a clip group to use for clip looping allows you to include areas outside of a clip within the loop</li>
+  <li>Looping can be applied to multitrack clip groups and mixed clip groups in the same way that it is applied to a clip or clip group on a single track.</li>
+  <li>When looping clips on multiple tracks, loops will be applied to the source clip on each track separately. If the source clips are different lengths, the loop locations will vary between tracks.</li>
+  <li>Looped clips can be combined with other clips into clip groups, which can then be looped again, effectively creating nested loops.</li>
+</ul>
+
+<h3 id="unlooping-clips">Unlooping Clips</h3>
+<p>Pro Tools offers two options for unlooping clips. You can choose to either remove all iterations of the loop or to flatten them into individual clips. You can also ungroup and flatten all nested clip loops and clip groups with a single command. To unloop a looped clip, select the looped clip and choose CLIP &gt; UNLOOP. In the resulting dialog, you can choose to either remove the loops or flatten the looped clip into a series of clips. Note that the Ungroup command functions on loops the same as using the Unloop command and choosing Flatten.</p>
+
+<p>[demonstration; 190 Unlooping Clips]</p>
+
+<h2 id="additional-editing-techniques">Additional Editing techniques</h2>
+<p>In the previous chapter, we covered a wide range of keyboard shortcuts for editing. Let’s look at a couple of more techniques that might come in handy.</p>
+
+<h3 id="working-with-the-grid">Working with the Grid</h3>
+<p>The grid in Pro Tools is of most use to sighted users who drag clips and make selections within the timeline while using the grid as a guide. One can choose to have dragged items snap to the grid automatically while using the various editing tools. Since screen reader users use keyboard shortcuts rather than edit tools, the grid itself isn’t relevant for most work. However, it can occasionally come in handy for specific tasks. For example, if you have an audio clip that is fairly in time with the grid, you can choose to separate the audio into smaller clips based on the grid value. Another scenario might involve a continuous clip from a long performance like a live concert. You might have a large number of songs contained within the file. If you have markers that define the starting point of each song, you can set the grid to reflect Clips/Markers and have Pro Tools separate the clip at each marker.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/191 Working with the Grid.mp3" /></audio>
+
+<h3 id="separating-at-transients">Separating at Transients</h3>
+<p>Similar to Separate on Grid, you can use the Separate at Transients feature to have Pro Tools separate selected clips at transient points. Clips are separated with the same detection algorithm used for Tab to Transients.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/192 Separate at Transients.mp3" /></audio>
+
+<h3 id="using-layered-editing">Using Layered Editing</h3>
+<p>The Layered Editing feature in Pro Tools preserves underlying audio when moving and pasting clips in the timeline. When Layered Editing is unchecked, pasting or moving one edge of a clip over another then subsequently removing it leaves an empty space on the timeline. With Layered editing checked, removing the pasted clip reveals the original underlying audio.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/193 Using Layered Editing.mp3" /></audio>
+
+<h2 id="audiosuite-overview">AudioSuite Overview</h2>
+<p>AudioSuite plug-ins offer file-based processing to timeline selections. AudioSuite plug-ins do not work in real time but are instead applied to selected clips or a selected range. Depending on the settings in the AudioSuite window, either new files will be created or existing files altered.</p>
+
+<h3 id="audiosuite-versus-insert-processing">AudioSuite versus Insert Processing</h3>
+<p>AudioSuite plug-ins work as a file-based process and thus require the rendering of the audio before playback. Many AudioSuite plug-ins have real-time counterparts with most of the same parameters available for manipulation.</p>
+
+<h3 id="audiosuite-features">AudioSuite Features</h3>
+<p>AudioSuite plug-ins offer the following main features:</p>
+
+<ul>
+  <li>Floating plug-in windowOnce an AudioSuite plug-in is selected, its window remains open until you close it, allowing you to process other clips with the same settings.</li>
+  <li>Destructive or non-destructive processingYou can choose to permanently change selected clips /files or to create new files based on the chosen plug-in settings.</li>
+  <li>Playlist-based selection or Clip Listbased selection processingYou can have AudioSuite render to affect a single instance of a clip on a track or all occurrences of the clip in the session.</li>
+  <li>Stereo and multitrack processingClips or selections on stereo or multichannel tracks are rendered in tandem, as are selections across multiple tracks.</li>
+  <li>Preview with bypassMost AudioSuite plug-ins support a preview mode, letting you audition the effect of the plug-in settings before rendering, and a Bypass button, allowing you to quickly compare the processed audio with the original while previewing.</li>
+</ul>
+
+<p>AudioSuite plug-ins also offer the following features:</p>
+
+<p>Multiple plug-in windows Multiple AudioSuite plug-in windows can be opened simultaneously, allowing you to process clips with multiple plug-ins in sequence.
+Preservation of fades and metadataDepending on the processing mode selected, you can preserve any fades applied to clips as well as any metadata associated with the clips.
+AudioSuite handlesAudioSuite processing can be applied beyond the current Edit selection, up to the length of the entire underlying file referenced by the clip. This allows you to trim clips out past the rendered selection after processing.
+Reverse option for Delay and ReverbA Reverse button in the AudioSuite plug-in window lets you render reverse delay and reverb effects with a single click.</p>
+
+<h3 id="using-audiosuite-plug-ins">Using AudioSuite Plug-Ins</h3>
+<p>To process audio using AudioSuite plug-ins:</p>
+
+<ol>
+  <li>Select the audio to be processed in the timeline or Clips List.</li>
+  <li>Choose an AudioSuite plug-in.</li>
+  <li>Configure the AudioSuite controls.</li>
+  <li>Configure the plug-in parameters.</li>
+  <li>Render the audio.</li>
+</ol>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/194 Using AudioSuite Plug-Ins.mp3" /></audio>
+
+<h6 id="key-shortcuts-3">Key Shortcuts:</h6>
+
+<ul>
+  <li>Preview Processing (with Flo Tools): Command+Option+Control+Shift+P</li>
+  <li>Render (with Flo Tools): Command+Option+Control+shift+R</li>
+  <li>Analyze (with Flo Tools): Command+Option+Control+Shift+A</li>
+</ul>
+
+<h2 id="working-with-the-clip-list">Working with the Clip List</h2>
+<p>All clips that are created or imported into a session can be found in the Clips List. As you work in a project, editing, recording and processing, the Clips List can populate to contain hundreds or even thousands of items. Thus, it’s important to understand how to manage items in the Clips List table.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/195 Working with the Clip List.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>Speak Selected Clips (with Flo Tools): Option+Shift+Comma</li>
+</ul>
+
+<h3 id="auditioning-clips-in-the-clip-list">Auditioning Clips in the Clip List</h3>
+<p>Auditioning clips within the Clips List table involves a modified mouse click. Since VoiceOver doesn’t natively support modified clicks, you can use a physical mouse or track pad to issue the modified click but you’ll need to either use Flo Mouse to position the mouse pointer in the appropriate spot or use Flo Tools to resize the Clips List table before clicking.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/196 Auditioning Clips in the Clip List.mp3" /></audio>
+
+<h6 id="key-shortcuts-5">Key Shortcuts:</h6>
+
+<ul>
+  <li>Mark Clip for Drag (with Flo Tools: Command+Option+Shift+Comma (and clips will audition as long as modifiers are held down)</li>
+</ul>
+
+<h3 id="finding-a-clip-in-the-clip-list">Finding a Clip in the Clip List</h3>
+<p>One of the most basic features of the Clip List is the Find feature. Using this feature lets you filter the Clips List table to show only the clips that match your search with options to include any newly created clips. There’s also a search history that remembers character strings previously used when finding clips. To use the Find feature to filter the items in the Clips List table, choose FIND… from the Clips List pop-up menu or, in the Edit window, press Command+Shift+F. To clear the previous search, choose Clear Find from the Clips List pop-up button or press Command+Shift+D.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/197 Finding a Clip in the Clip List.mp3" /></audio>
+
+<h6 id="key-shortcuts-6">Key Shortcuts:</h6>
+
+<ul>
+  <li>Find Clip: Command+Shift+F</li>
+  <li>Clear Find: Command+Shift+D</li>
+</ul>
+
+<h3 id="cleaning-up-the-clip-list">Cleaning Up the Clip List</h3>
+<p>As mentioned earlier, the Clip List can end up having a very large number of files, especially with sessions containing high track counts. You might find it beneficial to remove unused clips to declutter the Clip List. You might also wish to get rid of any unused clips and files when you’re done with a project. The Clips List contains tools for selecting and managing the contents of the Clips List table. From there, you can select files and remove or delete them from the session or even delete them from a drive.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/198 Cleaning Up the Clip List.mp3" /></audio>
+
+<h6 id="key-shortcuts-7">Key Shortcuts:</h6>
+
+<ul>
+  <li>Select Unused Clips: Command+Shift+U</li>
+  <li>Clear Selected Clips: Command+Shift+B</li>
+</ul>
+
+<h3 id="exporting-selections">Exporting Selections</h3>
+<p>You might find that you’d like to export a particular range of audio as its own separate audio file for use in other sessions. One of the options available is to consolidate a selection as a clip. this automatically creates a new file in the session’s Audio Files folder. The consolidate command does put a completely new clip in place of the previous selection on the timeline. If you’d rather not create a new audio file on the timeline, you can choose instead to capture a selection as a clip and then export it as an audio file. After making a selection within the boundaries of an existing clip, choose CLIP &gt; CAPTURE… or press Command+Shift+R. In the Capture dialog, enter a name for the clip and choose OK. You can use the “Export Clips as Files” command from the Clip List pop-up menu or press Command+Shift+K to export the selected clip as a stand-alone audio file..</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/199 Exporting Selections.mp3" /></audio>
+
+<h6 id="key-shortcuts-8">Key Shortcuts:</h6>
+
+<ul>
+  <li>Consolidate clip: Option+Shift+3</li>
+  <li>Capture Clip: Command+R</li>
+  <li>Export Selected Clips as Files: Command+Shift+K</li>
+</ul>
+
+:ET

@@ -1,0 +1,216 @@
+I"�B<p>This chapter covers the process of creating a session file, adding new tracks and managing them. We’ll take a closer look at navigating tracks and the timeline as well as playback behavior. Finally, we’ll discuss how to save and reopen session files.</p>
+
+<!--more-->
+
+<h2 id="using-the-dashboard">Using the Dashboard</h2>
+<p>The Dashboard is where you define the parameters when creating a new session file. By default, the Dashboard appears when Pro Tools is launched. If Pro Tools is running and the Dashboard isn’t open, press Command+N to open it. There’s a checkbox in the window that sets the preference for showing the Dashboard when Pro Tools starts up. Here you can specify things like sample rate, bit depth and I/O settings when creating a new session. From this window you can:</p>
+
+<ul>
+  <li>Create a new blank session on a local drive</li>
+  <li>Create a new blank project (with or without cloud backup)</li>
+  <li>Create a new session from a template</li>
+  <li>Open a session from a list of recently opened Pro Tools documents</li>
+  <li>Open a project you created or one in which you’re a collaborator</li>
+  <li>Open a session from a connected drive on your system</li>
+</ul>
+
+<h3 id="sessions-vs-projects">Sessions vs. Projects</h3>
+<p>While nearly every aspect of working with project and session files is the same, this guide will focus on session files. For more information on the differences between projects and sessions, see Chapter 11: “Sessions and Projects” in the Pro Tools Reference Guide.</p>
+
+<p>]demonstration: 26 Using the Dashboard]</p>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Show Dashboard (if not visible and no session is currently open): Command+N</li>
+  <li>Create Tab: Command+1</li>
+  <li>Recent Tab: Command+2</li>
+  <li>Projects Tab: Command+3</li>
+  <li>Create New session from Template: Command+T</li>
+</ul>
+
+<h2 id="working-with-tracks">Working with Tracks</h2>
+<p>Once you’ve defined the parameters in the Dashboard and click “Create,” Pro Tools will open a new blank session with no tracks. You can create new tracks or import audio into the session to begin working with Pro Tools.</p>
+
+<h3 id="adding-tracks">Adding Tracks</h3>
+<p>Choose  Track&gt;New or press Command+Shift+N to bring up the New Tracks dialog.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/27 New Tracks Dialog.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key shortcuts:</h6>
+
+<ul>
+  <li>Open New Tracks Dialog: Command+Shift+N</li>
+  <li>Select Track Format (or width): Command+Left/Right Arrow</li>
+  <li>Select Track Type: Command+Up/Down Arrow</li>
+  <li>Select Track Timebase: Command+Option+Up/Down Arrow</li>
+  <li>Add/Remove Row: Command+Shift+Down/Up Arrow</li>
+  <li>Tab to move through edit fields</li>
+</ul>
+
+<h3 id="selecting-tracks">Selecting Tracks</h3>
+<p>Clicking on a track in the name column of the Tracks List will toggle the selection status of a track. Pressing Control+; (Semicolon) will select the next track and pressing Control+P will select the previous track. Adding Shift to the shortcut will extend the track selection. With multiple tracks selected, pressing Control+Option+P will retract the selection from the top and Control+Option+; (Semicolon” will retract the selection from the bottom.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/28 Selecting Tracks.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Move Edit Selection to Next Track: Control+Semicolon</li>
+  <li>Move Edit Selection to Previous Track: Control+P</li>
+  <li>Extend Edit Selection to Include Next Track: Control+Shift+Semicolon</li>
+  <li>Extend Edit Selection to Include Previous Track: Control+Shift+P</li>
+  <li>Retract Edit Selection from Bottom Track: Control+Option+Semicolon</li>
+  <li>Retract Edit Selection from Top Track: Control+Option+P</li>
+</ul>
+
+<h3 id="naming-tracks">Naming Tracks</h3>
+<p>There are several ways to name tracks:</p>
+
+<ul>
+  <li>In the Tracks List of either the Mix or Edit window, right-click on the track in the name column and choose “Rename…”</li>
+  <li>In the channel strip of a track in either the Mix or Edit window, click on the track name and choose “Rename…”</li>
+  <li>With Flo Tools, focus VoiceOver on a channel strip and double-tap the letter T</li>
+  <li>From a control surface, double-tap the track’s Select button</li>
+</ul>
+
+<p>Any of the above methods will bring up a dialog where you can rename the track. If you have multiple tracks selected, clicking the OK button in the dialog will cycle through each of the selected tracks. If you double-tap the track select button on a control surface, pressing Command+Right/Left Arrow in the resulting dialog will cycle through the next and previous tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/29 Renaming Tracks.mp3" /></audio>
+
+<h6 id="key-shortcuts-3">Key Shortcuts:</h6>
+
+<ul>
+  <li>Double-tap the letter T with Flo Tools Inspector while focused on a track to bring up the contextual menu</li>
+  <li>Double-tap a track’s select button on a control surface</li>
+</ul>
+
+<h3 id="deleting-tracks">Deleting Tracks</h3>
+<p>To delete tracks, select one or more tracks and choose Track&gt;Delete. Alternatively, you can right-click on a track name in the Track List and choose “Delete.” If there are active clips on the tracks, Pro Tools will alert you with a dialog.</p>
+
+<blockquote>
+  <audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/30 Deleting Tracks.mp3" /></audio>
+
+  <ul>
+    <li>Show how to delete from Tracks List</li>
+    <li>Show how to delete from Track menu</li>
+    <li>Point out ellipsis when track contains active clips</li>
+  </ul>
+</blockquote>
+
+<h3 id="adding-audio-to-tracks">Adding Audio to Tracks</h3>
+<p>You can add audio to tracks either by recording onto a track or by importing audio files. We’ll cover both in detail later but for purposes of experimentation, it might be helpful to have some audio in the session with which to experiment.</p>
+
+<p>To import audio to a new track:</p>
+
+<ul>
+  <li>Choose File&gt;Import&gt;Audio…  or press Command+Shift+I</li>
+  <li>In the resulting dialog, use the file browser to navigate to the desired file(s)</li>
+  <li>With a file selected, either press Return or navigate to and click on the Add button</li>
+  <li>Click the Done button</li>
+</ul>
+
+<p>If the file you selected has the same sample rate and bit depth as the session, Pro Tools will reference the file at its current location on your system. If the file format doesn’t match, Pro Tools will prompt you for a location for a newly converted file that will be created. The default location is the Audio Files folder within the current session folder.</p>
+
+<p>Before completing the import process, Pro Tools prompts you with the Audio Import Options dialog where you can choose to import the audio to the Clips List only or also add it to a newly-created audio track. When the “New Track” radio button is selected, a Location pop-up button lets you choose whether to place the audio at the session start, the current selection (or insertion cursor position) or specify the placement through the Spot dialog.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/31 Importing Audio basics.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>Import Audio: Command+Shift+I</li>
+  <li>Command+T in the Destination dialog to import audio to a new track</li>
+  <li>Command+R in the Destination dialog to import audio to the Clips List</li>
+</ul>
+
+<h2 id="controlling-playback">Controlling Playback</h2>
+<p>Pro Tools displays 2 types of cursors in the Edit window: a playback cursor and an edit cursor. The playback cursor is a solid line that moves from left to right across the timeline and whose position is reflected in the Main Counter and Sub Counter displays.  The edit cursor is a flashing line that appears at the location where a track’s playlist is clicked using the Selector Tool.</p>
+
+<h3 id="timeline-selection-vs-edit-selection">Timeline Selection vs. Edit Selection</h3>
+<p>When a range is selected across the Main Ruler, this is known as a timeline selection and it determines the playback range. When a range is selected within the playlist of a track, that’s known as an edit selection. These two types of selections are technically independent. However, the default state for working in Pro Tools is to have the timeline selections and edit selections linked and it’s important to make sure that is the case whenever working in Pro Tools. It’s also important to note that, with timeline and edit selections linked, making a selection within a track will ensure that the timeline selection (and, therefore, playback) will match the edit selection. However, the opposite isn’t necessarily the case. Even with the two linked, defining a timeline selection without first selecting a track or moving the track selection with either Control+; (Semicolon) or Control+P does not guarantee that there’s anything selected within the timeline. This concept is important to understand and it’ll be especially important when we eventually get into editing audio clips and other data within tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/32 Linking Timeline and Edit Selections.mp3" /></audio>
+
+<h6 id="key-shortcuts-5">Key Shortcuts:</h6>
+
+<ul>
+  <li>Toggle Link Timeline and Edit Selection: Shift+Forward Slash</li>
+</ul>
+
+<h3 id="track-selections-vs-edit-selections">Track Selections vs. Edit Selections</h3>
+<p>Just as timeline and edit selections are technically independent, track selections and edit selections can also be independent of each other. However, it’s possible to link the two and it’s one of the most important things to enable when working in Pro Tools as a blind user. With track and edit selection unlinked, the selection of a track itself is independent from the insertion cursor. This is not a problem for sighted users who can readily distinguish between tracks that are selected and clips or waveforms that might be highlighted within the timeline. In such a scenario, there are actions that could affect one and not the other. With track and edit selections linked, it’s easier to understand what is or isn’t selected when performing important editing functions or managing tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/33 Linking Track and Edit Selection.mp3" /></audio>
+
+<h6 id="key-shortcuts-6">Key Shortcuts:</h6>
+
+<ul>
+  <li>Toggle Link Trak and Edit Selection: Shift+T</li>
+</ul>
+
+<h2 id="playback-behavior">Playback Behavior</h2>
+
+<h3 id="insertion-follows-playback">Insertion Follows Playback</h3>
+<p>There are two main modes of playback behavior in Pro Tools as it relates to the playback cursor and timeline selection. Within the Cursor Tool Cluster of the Edit window Toolbar, there’s a button named “Insertion Follows Playback.” When this button is selected, Pro Tools will begin playback from the location reflected in the Edit Selection Start counter. If playback is stopped, the Edit Selection Start counter updates to the current playback position. Pressing play will now resume playback from the current location and not the original start position. This behavior resembles that of a traditional tape machine. When the Insertion Follows Playback button is not selected, playback will always begin from the location reflected in the Edit Selection Start counter. If the transport is stopped and playback is interrupted, pressing Play will begin playback from the same original point. If there’s an edit selection range defined, Pro Tools will play only the selected range in the timeline and stop after playback. If the transport is once again engaged, it’ll begin from the exact same location as before.
+The keyboard shortcut for toggling Insertion Follows Playback is Control+N. If you’re using Flo Tools, pressing Control+N once indicates the status of the button and double-tapping the shortcut will toggle the button on and off.</p>
+
+<h3 id="edit-selections-and-insertion-follows-playback">Edit Selections and Insertion Follows Playback</h3>
+<p>It’s important to note that, when Insertion Follows Playback is selected, any edit selection range that may have been defined before playback, is immediately lost upon engaging the transport. In other words, if you make a selection in the timeline that you wish to delete or copy, for example, if you press Play even for a split second, your selection will have instantly disappeared. Any subsequent editing commands will have no effect because you’ll have nothing selected in the timeline and instead only a flashing insertion cursor.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/34 Insertion Follows Playback.mp3" /></audio>
+
+<h6 id="key-shortcuts-7">Key Shortcuts:</h6>
+
+<ul>
+  <li>Toggle Insertion Follows Playback: Control+N</li>
+  <li>For Flo Tools users, pressing Control+N will report the status and double-tapping will toggle Insertion Follows Playback</li>
+</ul>
+
+<h3 id="moving-the-playback-cursor">Moving the Playback Cursor</h3>
+<p>Sighted users can click with the Selector Tool within the timeline to move the playback cursor. This immediately updates the Main Counter and any further playback will begin from that location. If the transport is engaged while the playback cursor is moved, playback instantly begins from the new location. Just as moving the playback cursor changes the value of the Main Counter, editing the Main Counter also moves the playback cursor. This is one of the primary means of navigating the Pro Tools timeline. From the numeric keypad, press the * (Star or Asterisk) key, type a value then press the Enter. key. The playback cursor will immediately be positioned at that location.</p>
+
+<p>It should also be noted that, if you have “Insertion Follows Scrub/Shuttle” checked in the Transport section of the Operations tab of Pro Tools Preferences, pressing 1 or 2 on the numeric keypad for rewind and fast forward will also move the edit insertion through the timeline.</p>
+
+<p>[demonstration: 35 Moving the Playback cursor with the Numeric Keypad</p>
+
+<h6 id="key-shortcuts-8">Key Shortcuts:</h6>
+
+<ul>
+  <li>Activate Main Counter: Asterisk on the numeric keypad</li>
+  <li>Rewind: 1 on the numeric keypad</li>
+  <li>Fast Forward: 2 on the numeric keypad</li>
+  <li>From the qwerty keyboard, Shift+Period and Shift+Comma as alternates for Fast Forward and Rewind</li>
+</ul>
+
+<h2 id="saving-locating-and-reopening-session-files">Saving, Locating, and Reopening Session Files</h2>
+
+<h3 id="saving-a-session">Saving a Session</h3>
+<p>To save an open session, choose File&gt;Save or press Command+S. To save the session using a different name, choose File&gt;Save As… or press Command+Option+S and enter the new name in the Save As dialog. To save a self-contained copy of the session in a new folder with all associated session files, choose File&gt;Save Copy In… The “Save Copy In…” option ensures that the newly created session folder contains everything you need to copy the session to a different computer and open it.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/36 Save, Save As and Save Copy In.mp3" /></audio>
+
+<h6 id="key-shortcuts-9">Key Shortcuts:</h6>
+
+<ul>
+  <li>Save: Command+S</li>
+  <li>Save As: Command+Control+S</li>
+</ul>
+
+<h3 id="locating-and-opening-a-session-file">Locating and Opening a Session File</h3>
+<p>To open an existing session, choose File&gt;Open or press Command+O. In the resulting dialog, use the file browser to locate a session file and click the Open button or just press the Return key. You can also open a session from the Dashboard by clicking the Open From Disk button. Another way to open a session is to navigate to it in the Finder and press Command+O. If you try to open a new session file while a different session is currently open, you’ll be prompted to save the current session.</p>
+
+<p>[demonstration: 37 Opening a Session File</p>
+
+<h6 id="key-shortcuts-10">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open: Command+O</li>
+  <li>Close: Command+Shift+W</li>
+</ul>
+
+<h3 id="open-recent">Open Recent</h3>
+<p>Pro Tools keeps a list of recently opened files. Choose File&gt;Open Recent to see a list of sessions in reverse chronological order. Note that the item at the top has a keyboard shortcut of Command+Shift+O which is the shortcut for opening the most recent session.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/38 Open Recent.mp3" /></audio>
+:ET

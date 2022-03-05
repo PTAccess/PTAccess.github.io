@@ -1,0 +1,83 @@
+I")<p>In this chapter we’ll look at the process of creating meter and tempo events as well as linear tempo changes. We’ll discuss using pre and post roll for recording. We’ll also cover loop recording both audio and MIDI and how they differ.</p>
+
+<!--more-->
+
+<h2 id="adding-meter-and-tempo-events">Adding Meter and Tempo Events</h2>
+<p>The rulers in the Edit window display items like meter changes, tempo changes, markers, etc. as events represented by icons. The rulers aren’t accessible at the time of this writing. However, it should be noted that all operations performed through the various time and tempo operations windows simply apply the parameters defined within the windows and overwrite any previous data with any newly entered parameters.</p>
+
+<h3 id="adding-meter-changes">Adding Meter Changes</h3>
+<p>To add meter changes, navigate to the location where you’d like the meter to change and choose EVENT &gt; TIME OPERATIONS &gt; CHANGE METER… and, in the resulting dialog, enter the desired meter and press the  Apply button.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/139 Adding Meter Changes.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Time Operations Window: Option+1 on the numeric keypad</li>
+</ul>
+
+<h3 id="creating-a-linear-tempo-change">Creating a Linear Tempo Change</h3>
+<p>To create a linear tempo change, make sure the Conductor is enabled in the MIDI Control Cluster, select the range over which you’d like the tempo to change and choose EVENT &gt; TEMPO OPERATIONS &gt; LINEAR… and, in the resulting dialog, enter the desired tempo values and press the Apply button.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/140 Creating a Linear Tempo Change.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Tempo Operations Window: Option+2 on the numeric keypad</li>
+</ul>
+
+<h2 id="recording-selections">Recording Selections</h2>
+<p>When overdubbing or creating punch-ins, it’s often useful to create a selection which defines the range through which recording will take place. By using functions like pre/post roll and loop recording, one can precisely drop in and out of record mode automatically and, if necessary, use the defined range for loop recording to capture several performances of the selected section.</p>
+
+<h3 id="creating-and-adjusting-a-selection">Creating and Adjusting a Selection</h3>
+<p>A selection can be defined in several ways that we’ve covered earlier. Let’s review some methods for making a selection and take a look at how to adjust the selection.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/141 Creating and Adjusting a Selection.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Set Start (while transport is engaged): down arrow</li>
+  <li>Set End (while transport is engaged): Up Arrow</li>
+  <li>Adjust Selection Start to Left/Right by Nudge value: Option+Shift+Hyphen/Plus on the numeric keypad</li>
+  <li>Adjust Selection End to Left/Right by Nudge Value: Command+Shift+Hyphen/Plus on the numeric keypad</li>
+</ul>
+
+<h2 id="using-pre--and-post-roll">Using Pre- and Post-Roll</h2>
+<p>To enable Pre/Post Roll in a session, choose OPTIONS &gt; PRE/POST ROLL or press Command+K. This will enable both pre and post roll at the same time. In the Transport cluster of the Edit window or in the Transport window itself, you can independently enable pre and post roll. Whenever the pre or post roll value is edited (either from the Transport display or with Flo Tools), the respective mode is activated automatically.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/142 Using Pre and Post Roll.mp3" /></audio>
+
+<h2 id="loop-recording-differences-audio-versus-midi">Loop Recording Differences: Audio Versus MIDI</h2>
+<p>While the process of loop recording audio and MIDI are essentially the same, there are a couple of differences. With audio, new clips are created with each pass and only the latest pass remains in the main playlist. With MIDI, it’s much the same but with the added option to merge the MIDI data, thus superimposing MIDI notes over others, creating a composite performance.</p>
+
+<h3 id="loop-recording-and-playlists">Loop Recording and Playlists</h3>
+<p>Pro Tools offers two ways to access the clips that are created during the loop recording process. One method is a little more comprehensive but is somewhat trickier to execute and the other is very straight-forward but more limited. Let’s take a look at the simpler method first which involves the automatic creation of new playlists. In the Operations tab of the Pro Tools Preferences window, under the Recording area, check the box for “Automatically Create New Playlists When Loop Recording.” With this preference enabled, each recorded pass of the looped section will be placed on a new playlist automatically. Going through the takes is as simple as cycling playlists.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/143 Loop Recording and Playlists.mp3" /></audio>
+
+<h6 id="key-shortcuts-3">Key Shortcuts:</h6>
+
+<ul>
+  <li>Toggle Loop Record: Option+L</li>
+  <li>Toggle Loop Record (with Flo Tools): Double-tap Option+L</li>
+  <li>Toggle Loop Playback: Command+Shift+L</li>
+  <li>Toggle Loop Playback (with Flo Tools): Double-tap Command+Shift+L</li>
+  <li>Next Playlist: Shift+Down Arrow</li>
+  <li>Previous Playlist: Shift+Up Arrow</li>
+</ul>
+
+<h3 id="recording-midi-using-loop-playback-with-midi-merge">Recording MIDI Using Loop Playback with MIDI Merge</h3>
+<p>when loop recording with MIDI, the process illustrated above is similar. However, MIDI loop recording offers another possibility for continuously overdubbing nondestructively the way a traditional hardware pattern sequencer does. To use MIDI Merge for loop recording, select the MIDI Merge button within the MIDI Controls cluster of the Edit window or Transport window or press 9 on the numeric keypad to toggle MIDI Merge on and off. If you’re using Flo Tools, pressing num pad 9 reports the status of the MIDI Merge button and double-tapping will toggle the control. For Pro Tools | Ultimate users, the Flo Tools command is Option+9 on the numeric keypad.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/148 Recording MIDI Using Loop Playback with MIDI Merge.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>toggle MIDI Merge: 9 on the numeric keypad</li>
+  <li>Speak MIDI Merge Status (with Flo Tools): Option+9 on the numeric keypad</li>
+  <li>Toggle MIDI Merge (with Flo Tools): Double-tap Option+9 on the numeric keypad</li>
+</ul>
+:ET

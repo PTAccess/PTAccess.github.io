@@ -1,0 +1,131 @@
+I"�,<p>This chapter covers basic mixing techniques including simple signal routing, application of plug-in processing, setting levels, writing automation and creating a final stereo mix. We’ll also take a look at creating a backup copy and archive of your session.</p>
+
+<!--more-->
+
+<h2 id="basic-mixer-terminology">Basic Mixer Terminology</h2>
+<p>The terminology used for mixers and mixing is largely the same between hardware and software and, for the most part, between digital workstations. The fundamental purpose of a mixer is to route incoming signals, combine them in various ways and output those signals to the mixer’s outputs. In the case of DAWs, the output might be a physical interface or an audio file or both.</p>
+
+<h2 id="working-in-the-mix-window">Working in the Mix Window</h2>
+<p>The Pro Tools Mix window is where you’ll do most of your routing of signals, setting of levels and  automation. To open the Mix window choose WINDOW &gt; MIX or press Command+Equals. If the Mix window is open but the Edit window has focus, pressing Command+Equals brings the Mix window into focus and subsequently toggles focus between the Mix and Edit windows.</p>
+
+<h3 id="configuring-the-mix-window">Configuring the Mix Window</h3>
+<p>The Mix window contains a number of elements that can be shown or hidden. These settings can be found under the View menu and are session-specific. Choose VIEW &gt; MIX WINDOW VIEWS to select which elements to include in the Mix window.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/99 Configuring the Mix Window.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Scroll Up/Down Vertically: Page Up/Page Down</li>
+</ul>
+
+<h2 id="mix-window-views">Mix Window Views</h2>
+<p>Let’s take a look at how each item under the Mix Window Views submenu changes the elements within the Mix window’s track strips.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/100 Mix Window Views.mp3" /></audio>
+
+<h2 id="using-plug-in-processors">Using Plug-In Processors</h2>
+<p>Pro Tools supports two main categories of plug-in processors: real timeas AAX plug-ins (native and DSP) and file-basedas Audio Suite. For now we’ll focus on real-time processing.</p>
+
+<h3 id="real-time-plug-in-formats">Real-Time Plug-In Formats</h3>
+<p>Plug-ins come in mono, multi-mono and multi-channel formats. With multi-channel plug-ins, the channels are linked so any changes you make to a given parameter apply to all output channels. In multi-mono formats, parameters can be changed independently for any channel.</p>
+
+<h3 id="instantiating-plug-ins">Instantiating Plug-Ins</h3>
+<p>Plug-ins can be instantiated on a track from any of the insert selectors or from the Plug-In window.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/101 Instantiating Plug-Ins.mp3" /></audio>
+
+<h3 id="moving-plug-ins">Moving Plug-Ins</h3>
+<p>The process of moving a plug-in from one insert to another is done by dragging the plug-in from its insert slot to a different slot. This is done using the VoiceOver Mouse Down command (VO+Shift+Command+Space Bar). Since it involves the mouse pointer and dragging, it can sometimes be a bit tricky and you might end up opening the Plug-In window rather than repositioning the plug-in. Let’s take a closer look at the process of moving plug-ins.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/102 Moving Plug-Ins.mp3" /></audio>
+
+<h3 id="plug-ins-provided-with-pro-tools">Plug-Ins Provided with Pro Tools</h3>
+<p>Pro Tools comes with many stock plug-ins including EQ and dynamics processors. There’s also a large assortment available with the Avid Complete Plug-In Bundle.</p>
+
+<h3 id="organizing-plug-ins">Organizing Plug-Ins</h3>
+<p>As you acquire new plug-ins, you might find it helpful to organize your plug-ins and how they appear in the pop-up menus.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/103 Organizing Plug-Ins.mp3" /></audio>
+
+<h2 id="using-basic-automation">Using Basic Automation</h2>
+<p>Let’s take a look at the three most basic modes of automation: Write, Read and Off.</p>
+
+<h3 id="recording-automation-write-mode">Recording Automation (Write Mode</h3>
+<p>With Write mode enabled on a track, you can manipulate controls and record your changes in real time. To record automation in Write mode, do the following:</p>
+
+<ol>
+  <li>Choose WINDOW &gt; AUTOMATION or press Command+4 on the numeric keypad.</li>
+  <li>In the Automation window, make sure the Suspend Automation button is not selected.</li>
+  <li>Enable the automation parameters you wish to record (like volume, pan, mute, etc.) by clicking on the parameter types to select them.</li>
+  <li>Set your track to “Write” from the Automation Mode Selector within the mixer strip.</li>
+  <li>Press play and, while the session plays back, make whatever parameter changes you wish to automate.</li>
+</ol>
+
+<p>If you’re not happy with the automation pass, simply undo or re-record your automation in Write mode.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/104 Recording Automation (write Mode).mp3" /></audio>
+
+<h3 id="playing-back-automation-read-mode">Playing Back Automation (Read Mode</h3>
+<p>The default automation mode in Pro Tools is “read mode. In this mode, automation cannot be written but can be edited. When playing back in Read mode, any previously written automation is played back.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/105 Playing Back Automation (Read Mode.mp3" /></audio>
+
+<h3 id="turning-automation-off-off-mode">Turning Automation Off (Off Mode</h3>
+<p>Off mode disables all automation parameters on a track regardless of their status in the Automation window. In Off mode, no automation can be recorded or played back.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/106 Turning Automation Off (Off Mode.mp3" /></audio>
+
+<h3 id="viewing-automation-playlists">Viewing Automation Playlists</h3>
+<p>Automation playlists contain various automation data associated with a track. The Track View Selector can be set to display any one of several parameters including automation (often referred to as automation playlists). Audio tracks default to a waveform view but will also have a volume, pan and mute view as well. If other automation types have been recorded on a track, the Track View Selector will show those automation types as choices as well. Although the Pro Tools documentation refers to this data as “automation playlists,” they should not be confused with track playlists which we’ll discuss in a later chapter.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/107 Viewing Automation Playlists.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Show Previous/Next View on Selected Tracks: Command+Control+Left/Right Arrows</li>
+</ul>
+
+<h3 id="automation-lanes">Automation Lanes</h3>
+<p>Pro Tools can also display automation lanes beneath a track in the Edit window. These appear as separate elements from the regular track controls. For blind users they serve no useful purpose but let’s take a look at how they appear so that, if you find yourself in a session file with playlist lanes being shown, you’ll be able to recognize what’s going on with the user interface.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/108 Automation Lanes.mp3" /></audio>
+
+<h3 id="editing-breakpoint-automation">Editing Breakpoint Automation</h3>
+<p>Automation playlists contain lines with breakpoints” that sighted users can click on and drag to reshape volume as well as other automation data. These views are not accessible however standard editing commands like cut and paste still apply so it’s possible for a blind user to do some very basic editing using built-in commands.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/109 Editing Breakpoint Automation.mp3" /></audio>
+
+<h2 id="backing-up-your-session">Backing Up Your Session</h2>
+<p>Before we look at the process of outputting a final mix, let’s consider backup and archiving options.</p>
+
+<h3 id="considerations-for-backup-and-archive">Considerations for Backup and Archive</h3>
+<p>As discussed earlier, using the “Save As…” command saves a copy of the session in the session folder alongside any other previously saved versions of the session. You can certainly copy the entire session folder to another drive for backup. However, there is a risk that not all of the files referenced within the session files are located within the Audio Files folder for the session. To ensure that you have everything you need within a backup copy of the session, you can use the “Save Copy In…” feature.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/110 Considerations for Backup and Archive.mp3" /></audio>
+
+<h3 id="save-copy-in">Save Copy In…</h3>
+<p>The “Save Copy In…” feature offers options for creating a new session file along with its own folder. Sessions can be saved for earlier versions of Pro Tools (if necessary). There’s also an option for copying all media files ((even if they reside within folders on various drives) and placing all of the files associated with the session within the new session folder. To archive your session in this manner, choose FILE &gt; SAVE COPY IN…</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/111 Save Copy In....mp3" /></audio>
+
+<h2 id="creating-a-stereo-mixdown">Creating a Stereo Mixdown</h2>
+
+<h3 id="mixdown-options">Mixdown Options</h3>
+<p>The most common method for creating mix files from a Pro Tools session is to use the Bounce Mix feature.</p>
+
+<h3 id="considerations-for-bouncing-audio">Considerations for Bouncing Audio</h3>
+<p>It’s important to keep in mind that the Bounce Mix feature will create an audio file that includes everything that you would normally hear while playing back a session. Before bouncing a mix, make sure every track in your session is routed correctly and you hear everything exactly as intended. Also, keep in mind that, if you don’t have a range selected in the timeline, Pro Tools will create a file that begins at the session start and continues to the end of the longest track in the session. Otherwise, if you have a range selected, Pro Tools will bounce only the selected range.</p>
+
+<h3 id="bouncing-to-disk">Bouncing to Disk</h3>
+<p>To bounce a mix, choose FILE &gt; BOUNCE MIX… or press Command+Option+B. In the Bounce Mix dialog, select the desired options and select the Bounce button or press Return.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/112 Bouncing to Disk.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key shortcuts:</h6>
+
+<ul>
+  <li>Bounce to Disk: Command+Option+B</li>
+</ul>
+:ET

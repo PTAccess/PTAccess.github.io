@@ -1,0 +1,250 @@
+I"�G<p>This chapter takes a deeper dive into audio editing, using the Fades dialog and MIDI quantization (both upon input and after recording) as well as the MIDI Real Time Properties feature of Pro Tools.</p>
+
+<!--more-->
+
+<h2 id="editing-using-keyboard-shortcuts">Editing Using Keyboard Shortcuts</h2>
+<p>Although the editing tools that sighted users rely on are not accessible to screen readers, there is a plethora of keyboard shortcuts available for practically every editing task. The Pro Tools Shortcuts PDF lists all of them and organizes them into categories. 
+for editing.</p>
+
+<h3 id="shortcuts-for-auditioning">Shortcuts for Auditioning</h3>
+<p>Use the auditioning shortcuts to hear what precedes or follows your selected range or insertion cursor.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/167 Shortcuts for Auditioning.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key shortcuts:</h6>
+
+<ul>
+  <li>Play by Pre-roll Value Up to Selection Start/End (or Current Location if No selection),: Option+left/right arrows</li>
+  <li>Play by Post-roll value From Selection start/End (or Current Cursor Location if No Selection),: Command+left/right arrows</li>
+  <li>Play by Pre and Post-Roll Value Through Selection Start/End,: Command+Option+left/right arrows</li>
+</ul>
+
+<h3 id="edit-selection-definition-and-navigation-shortcuts">Edit Selection, Definition and Navigation Shortcuts</h3>
+<p>We’ve briefly covered some keyboard shortcuts for navigating through clip boundaries. Let’s look at all of the shortcuts available for navigation and selection.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/168 Navigation and Selection Shortcuts.mp3" /></audio>
+
+<ul>
+  <li>Command+Option+Tab to enable or disable Tab to Transients command</li>
+  <li>Tab to Locate cursor to next transient</li>
+  <li>Option+Tab to locate cursor to previous transient</li>
+  <li>Tab to locate cursor to next Clip-boundary/sync</li>
+  <li>Option+Tab  to locate cursor to previous Clip boundary/sync</li>
+  <li>Control+Tab to select next Clip</li>
+  <li>Control+Option+Tab to select previous Clip</li>
+  <li>Shift+Tab to extend selection to next Clip-boundary</li>
+  <li>Shift+Option+Tab to extend selection to previous Clip-boundary</li>
+  <li>Control+Shift+Tab to extend selection to include next Clip</li>
+  <li>Control+Shift+Option+Tab to extend selection to include previous Clip</li>
+  <li>Return to return to the Start of the Session</li>
+  <li>Option+Return to go to the End of the Session</li>
+  <li>Shift+Return to extend selection to the start of the session</li>
+  <li>Shift+Option+Return to extend the selection to the end of the session</li>
+  <li>Shift+Forward slash to link Timeline and Edit selection</li>
+  <li>Shift+T to link Track and Edit selection</li>
+  <li>Down/Up Arrows to set selection start/end during playback</li>
+  <li>Down Arrow to move the insertion to the beginning of the Edit selection</li>
+  <li>Up Arrow to move the insertion to the end of the Edit selection</li>
+  <li>Command+A to select entire track in Edit window</li>
+</ul>
+
+<h3 id="setting-the-song-start">Setting the Song Start</h3>
+
+<p>Every session includes a song start marker that appears, by default at the beginning of the timeline. You can set the song start to any position on the timeline. It’s sometimes useful to set a song start position to a location other than the beginning of the timeline, especially if you have pick-up bars or empty pre-roll space before the actual start of the session content. The song start is also handy when you’d like to make a selection from the end of the timeline to the song start rather than the beginning of the timeline. Under the Event menu, choose Time Operations &gt; Move Song Start… to change the position of the song start marker. You can move to the song start by pressing Control+Return and you can select to the song start from anywhere on the timeline by pressing Shift+Control+Return.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/168B Setting the Song Start.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Go to Song Start, Control+Return</li>
+  <li>Extend selection to Song Start, Control+Shift+Return</li>
+</ul>
+
+<h3 id="editing-nudging-and-trimming-shortcuts">Editing, Nudging and Trimming Shortcuts</h3>
+<p>Many of the editing shortcuts in Pro Tools rely on the numeric keypad. If you don’t have an extended keyboard, some of the shortcuts are duplicated on the qwerty keyboard or you can use the Flo Tools Virtual Extended Keyboard.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/169 Editing, Nudging and Trimming Shortcuts.mp3" /></audio>
+
+<ul>
+  <li>Command+E to separate Clip at Insertion or Selection</li>
+  <li>Command+H to heal Separation</li>
+  <li>Option+Shift+7 or Control+A to  trim from Start to Insertion</li>
+  <li>Option+Shift+8 or Control+S to trim from End to Insertion
+*Command+T to trim to Selection</li>
+  <li>Command+Control+R to trim to File Start</li>
+  <li>Command+Control+T to trim to File End</li>
+  <li>Command+Control+T to trim to File Boundaries</li>
+  <li>Command+Option+Plus/Minus keys or Option+Shift+Hyphen/Equals on qwerty keyboard to change Nudge value</li>
+  <li>Minus or Control+Comma to nudge Earlier by Nudge value (Nudge Edit selection and any Clips entirely inside the Edit selection)</li>
+  <li>Plus or Control+Period to nudge Later by Nudge value (Nudge Edit selection and any Clips entirely inside the Edit selection)</li>
+  <li>Control+M to nudge Earlier by Next Larger Nudge Value</li>
+  <li>Control+Slash to nudge Later by Next Larger Nudge Value</li>
+  <li>Shift+Plus/Minus to nudge start/end data to left/right by Nudge value (keeps underlying audio and moves start/end)</li>
+  <li>Control+Plus/Hyphen to nudge data within current Clip to left (+) or right (Hyphen) by Nudge value (keeps Clip start/end and moves underlying audio)</li>
+  <li>Option+Shift+Plus/Hyphen to nudge left selection boundary right/left by Nudge value</li>
+  <li>Command+Shift+Plus/Hyphen to nudge right selection boundary right/left by Nudge value</li>
+  <li>Option+Plus/Hyphen to trim left edge of Clip to right/left by Nudge value</li>
+  <li>Command+Plus/Hyphen to trim right edge of Clip to right/left by Nudge value</li>
+  <li>Control+Option+Period to snap Clip to Next</li>
+  <li>Control+Option+Comma to snap Clip to Previous</li>
+</ul>
+
+<h3 id="midi-note-editing-shortcuts">MIDI Note Editing Shortcuts</h3>
+<p>All of the shortcuts available for audio clip editing apply to MIDI clips as well. There are some specific shortcuts available for MIDI note editing when in Notes View. We’ve mentioned a few in an earlier demonstration. Let’s take a look at all of them.</p>
+
+<p>[demonstration: 170 MIDI Note Editing Shortcuts[</p>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Select previous note, Left Arrow</li>
+  <li>Select Next note, Right Arrow</li>
+  <li>Add previous note to the current selection, Shift+Left Arrow</li>
+  <li>Add Next note to the current selection, Shift+Right Arrow</li>
+  <li>Transpose up one semitone, Up Arrow</li>
+  <li>Transpose down one semitone, Down Arrow</li>
+  <li>Copy and transpose up one semitone, Option+Up Arrow</li>
+  <li>Copy and transpose down one semitone, Option+Down Arrow</li>
+  <li>Transpose up one octave, Shift+Up Arrow</li>
+  <li>Transpose down one octave, Shift+Down Arrow</li>
+  <li>Copy and transpose up one octave, Option+Shift+Up Arrow</li>
+  <li>Copy and transpose down one octave, Option+Shift+Down Arrow</li>
+  <li>Transpose up in key, Control+Up Arrow</li>
+  <li>Transpose down in key, Control+Down Arrow</li>
+  <li>Copy and transpose up in key, Option+Control+Up Arrow</li>
+  <li>Copy and transpose down in key, Option+Control+Down Arrow</li>
+  <li>Increase velocity by five, Command+Up Arrow</li>
+  <li>Decrease velocity by five, Command+Down Arrow</li>
+  <li>Increase velocity by fifteen, Command+Shift+Up Arrow</li>
+  <li>Decrease velocity by fifteen, Command+Shift+Down Arrow</li>
+  <li>Trim note start to the left, Control+Left Arrow</li>
+  <li>Trim note start to the Right, Control+Right Arrow</li>
+  <li>Trim note end to the left, Option+Left Arrow</li>
+  <li>Trim note end to the Right, Option+Right Arrow</li>
+  <li>Trim note start to the left by the next value, Control+Shift+Left Arrow</li>
+  <li>Trim note start to the Right by the next value, Control+Shift+Right Arrow</li>
+  <li>Trim note end to the left by the next value, Option+Shift+Left Arrow</li>
+  <li>Trim note end to the Right by the next value, Option+Shift+Right Arrow</li>
+</ul>
+
+<h2 id="working-with-playlists">Working With Playlists</h2>
+<p>Playlists in Pro Tools offer a means to access multiple takes within a track without the need to use up multiple tracks. Whichever playlist is the topmost (or frontmost) is considered the main playlist. A track inherits its name from the main playlist. One of the most powerful features of Pro Tools is its capabilities for fast creation and editing a composite of several playlists (known as “comping”).</p>
+
+<h3 id="creating-and-duplicating-playlists">Creating and Duplicating Playlists</h3>
+<p>As soon as a track is created, it has an empty playlist. Once clips have been recorded or pasted on the track, the playlist can be duplicated to facilitate experimentation with arrangement for example. Alternatively, a new blank playlist can be created, preserving the contents of the previous playlist. Several playlists can be created with the option of making any one of the playlists the current (or main) playlist. The playlist selector can be found within the track strips of the Edit window.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/171 Creating and Duplicating Playlists.mp3" /></audio>
+
+<h3 id="playlist-creation-duplication-and-navigation-shortcuts">Playlist Creation, Duplication and Navigation Shortcuts</h3>
+<p>Pro Tools offers a number of shortcuts for creating and duplicating playlists that apply either globally to all or only to selected tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/172 Playlist Creation, Duplication and Navigation Shortcuts.mp3" /></audio>
+
+<h6 id="key-shortcuts-3">Key Shortcuts:</h6>
+
+<ul>
+  <li>Speak Current Playlist for Focused Track (with Flo Tools Inspector): \</li>
+  <li>Open Playlist Selector for Focused Track (with Flo Tools Inspector): Double-tap \</li>
+  <li>Create a new playlist for the first selected track 
+in the session, Control+\</li>
+  <li>Create a new playlist for each track in the session, Control+Option+\</li>
+  <li>Create a new playlist for each selected track in the session, Control+Option+Shift+\</li>
+  <li>Duplicate the main playlist for the first selected track in the session, Command+Control+\</li>
+  <li>Duplicate the main playlist for each track in the session, Command+Option+Control+\</li>
+  <li>Duplicate the main playlist for each selected track in the session, Command+Option+Control+Shift+\</li>
+  <li>Cycle to Next Playlist, Shift+Down Arrow
+*Cycle to Previous Playlist, Shift+Up Arrow</li>
+  <li>Navigate to first playlist, Shift+Home or FN+Shift+Left Arrow</li>
+  <li>Navigate to last playlist, Shift+End or FN+Shift+Right Arrow</li>
+  <li>Move ahead five playlists, Shift+Page Down or FN+Shift+Down Arrow</li>
+  <li>Move back five playlists, Shift+Page Up or FN+Shift+Up Arrow</li>
+</ul>
+
+<h3 id="track-compositing-or-comping-a-track">Track Compositing or Comping a Track</h3>
+<p>By selecting portions of various playlists and copying or moving them to a designated “target” playlist, one can create what’s known as a “composite track.” This process is often referred to as “comping.” Pro Tools offers a number of keyboard shortcuts to speed up the process of comping. Before getting into the comping process, one must define one of the existing playlists as a target for the assembly of clips.</p>
+
+<h3 id="setting-up-a-target-playlist">Setting Up a Target Playlist</h3>
+<p>To set up a target playlist, select a track and use its playlist selector to select a playlist from the Target submenu or press Command+Shift+Right Arrow. The chosen playlist will become the target to which  clips will either be moved or copied.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/173 Setting Up a Target Playlist.mp3" /></audio>
+
+<h3 id="track-compositing-shortcuts">Track Compositing Shortcuts</h3>
+<p>Once you’ve defined a target playlist, you can use keyboard shortcuts to quickly copy or move edit selections to the target playlist as well as navigate quickly between target and other playlists.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/174 Track Compositing Shortcuts.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>Designate as Target Playlist, Command+Shift+Right Arrow</li>
+  <li>Show Target Playlist, Shift+Right Arrow</li>
+  <li>Toggle Recent Playlist, Shift+Left Arrow</li>
+  <li>Copy Selection to Target Playlist, Option+Shift+Up Arrow</li>
+  <li>Copy Selection to New Playlist, Option+Shift+Down Arrow</li>
+  <li>Move Selection to Target Playlist, Option+Shift+T</li>
+  <li>Move Selection to New Playlist, Option+Shift+N</li>
+  <li>Cycle in Audio from Next Playlist, Command+Shift+Down Arrow</li>
+  <li>Cycle in Audio from Previous Playlist, Command+Shift+Up Arrow</li>
+</ul>
+
+<h2 id="working-with-fades">Working with Fades</h2>
+<p>As we saw earlier, fades can quickly be added from the insertion cursor to the start or end of a clip or across adjacent clip boundaries using default curve shapes. Let’s take a closer look at the Fade dialog, the available options within the various types of fade dialogs and how to manage settings and presets.</p>
+
+<h3 id="using-the-fades-dialog-boxes">Using the Fades Dialog Boxes</h3>
+<p>The various types of fade dialog boxes have different options related to the respective fade type. Let’s take a look at some of the available options.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/175 Using the Fades Dialog Boxes.mp3" /></audio>
+
+<h3 id="using-fade-presets">Using Fade Presets</h3>
+<p>Each Fade dialog has a set of 5 presets. A set of presets can be saved as a settings file. You can load a settings file or manage settings from the Librarian menu. Command-click any preset to store the current settings in that preset slot. Press Control+1-5 to recall Presets 1-5.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/176 Using Fade Presets.mp3" /></audio>
+
+<h3 id="editing-existing-fades">Editing Existing Fades</h3>
+<p>Pro Tools sees fades as being associated with clips but also sees them as having boundaries. We’ve seen how tabbing to fade boundaries works. When selecting an entire fade, it’s possible to edit the fade’s position and length using some of the same keyboard shortcuts used for editing clips.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/177 Editing Existing Fades.mp3" /></audio>
+
+<h3 id="deleting-fades">Deleting Fades</h3>
+<p>By selecting a clip and pressing the Backspace key, a fade can be deleted and the underlying audio remains. To delete multiple fades, select a range and choose EDIT &gt; FADES &gt; Delete.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/178 Deleting Fades.mp3" /></audio>
+
+<h2 id="creating-rhythmic-changes-for-audio-and-midi-data">Creating Rhythmic Changes for Audio and MIDI Data</h2>
+<p>Let’s take a closer look at quantization of MIDI and Audio data both in the Input Quantize window as well as the standard Quantize window.</p>
+
+<h3 id="using-input-quantize">Using Input Quantize</h3>
+<p>Input Quantize allows you to quantize MIDI data as it’s being recorded. To open the Input Quantize window, choose EVENT &gt; EVENT OPERATIONS &gt; INPUT QUANTIZE…</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/179 Using Input Quantize.mp3" /></audio>
+
+<h6 id="key-shortcuts-5">Key Shortcuts:</h6>
+
+<ul>
+  <li>Event Operations Window: Option+3 on the numeric keypad</li>
+</ul>
+
+<h3 id="quantizing-existing-material">Quantizing Existing Material</h3>
+<p>You can apply quantization with the Quantize window after a recording pass. Quantizing this way offers the option for experimentation with the various options available. To open the Quantize window, choose EVENT &gt; EVENT OPERATIONS &gt; QUANTIZE… or press Option+0.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/180 Quantizing Existing Material.mp3" /></audio>
+
+<h6 id="key-shortcuts-6">Key Shortcuts:</h6>
+
+<ul>
+  <li>Quantize: Option+0</li>
+</ul>
+
+<h2 id="midi-real-time-properties">MIDI Real-Time Properties</h2>
+<p>Pro Tools offers the option to adjust several aspects of a MIDI performance in real time with the MIDI Real-Time Properties feature. Real-Time Properties can be applied on an entire track or on a per-clip basis. You can show the Real-time Properties controls by choosing VIEW &gt; EDIT WINDOW VIEWS &gt; REAL-TIME PROPERTIES&gt; Alternatively, you can open the MIDI Real-Time Properties floating window by choosing EVENT &gt; MIDI REAL-TIME PROPERTIES.</p>
+
+<h3 id="using-the-real-time-properties-view">Using the Real-Time Properties View</h3>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/181 Using the Real-Time Properties View.mp3" /></audio>
+
+<h3 id="using-the-real-time-properties-floating-window">Using the Real-Time Properties Floating Window</h3>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/182 Using the Real-Time Properties Floating Window.mp3" /></audio>
+
+:ET

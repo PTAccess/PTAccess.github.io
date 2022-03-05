@@ -1,0 +1,175 @@
+I"Y9<p>This chapter covers the basics of MIDI in Pro Tools. We’ll take a look at the types of MIDI tracks, how to create them and how to record  and  play back MIDI data.</p>
+
+<!--more-->
+
+<h2 id="midi-in-pro-tools">MIDI in Pro Tools</h2>
+<p>As we’ve seen earlier, Pro Tools provides two types of tracks for working with MIDI data: MIDI tracks and Instrument tracks. MIDI tracks store MIDI note and controller data and pass no audio and are usually used in conjunction with either an external MIDI device (such as  a  keyboard or sound module) or to an auxiliary track with a virtual instrument plug-in. Instrument tracks combine MIDI data storage with audio capabilities. Rather than sending MIDI out to external devices or auxiliary tracks, instrument tracks have inserts that can directly host a virtual instrument plug-in, simplifying the process of recording, editing and playing back MIDI data.</p>
+
+<h3 id="creating-midi-compatible-tracks">Creating MIDI-Compatible Tracks</h3>
+<p>The type of MIDI tracks you’ll create in Pro Tools will depend on your workflow and whether you need to use external devices. For ease of use, we’ll focus on instrument tracks for demonstration purposes.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/51 Creating MIDI Compatible Tracks.mp3" /></audio>
+
+<h3 id="sample-based-operation-versus-tick-based-operation">Sample-Based Operation versus Tick-Based Operation</h3>
+<p>When you create MIDI tracks in Pro Tools, they default to tick timebase (sometimes referred to as bar|beat base) whereas audio tracks default to sample timebase. The most important thing to remember about the timebase is that events on a track set to sample timebase remain in a fixed position on the timeline regardless of any changes in the session’s tempo. Events on tracks whose timebase is set to ticks reside in bar and beat positions rather than fixed positions. This means that, if you change the tempo, a MIDI event that occurs on bar 3 will play back at a different point in time  if the tempo is changed. While it’s possible for any track type to use either samples or ticks as a timebase, for now, we’ll use MIDI tracks with ticks as a timebase.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/52 Samples Timebase versus Ticks Timebase.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>With Flo Tools Inspector, press the letter B once while focused on a track to report its timebase and double-tap to bring up the timebase selector menu</li>
+</ul>
+
+<h3 id="time-scale-and-rulers-for-working-with-midi">Time Scale and Rulers for Working with MIDI</h3>
+<p>Although it’s possible to record to a MIDI track with no reference to bars and beats, it can be helpful later on to have the option to navigate by measures rather than minutes and seconds. You can switch the Main Counter to display whichever time format is most appropriate for your needs.</p>
+
+<p>The time rulers display a number of elements related to tempo and meter among other things. They’re mostly visual in nature and aren’t particularly accessible. It should be noted that, while the rulers display events, it’s possible to create and manipulate ruler events through means other than directly clicking within the rulers.</p>
+
+<h2 id="setting-the-base-meter-and-tempo">Setting the Base Meter and Tempo</h2>
+<p>Tempo and meter events appear within the tempo and meter rulers. Sighted users have the option of clicking directly within a ruler to create or edit a ruler event. As stated earlier, the rulers aren’t accessible. 
+However, it’s worth noting that you can create meter and tempo changes from menu commands and dialog boxes and any changes you make will overwrite any previous tempo and meter events within a selection.</p>
+
+<h3 id="setting-the-base-meter">Setting the Base Meter</h3>
+<p>When you create a new session, the default meter is 4/4. To change the meter from the session start, choose Event&gt;Time Operations&gt;Change Meter… Pro Tools opens the Time Operations dialog with the “Change Meter” view displayed. Alternatively, you can press Option+1 on the numeric keypad. Pro Tools remembers the previously displayed view so you might have to choose “Change Meter” from the button at the top of the window if it’s not already selected.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/53 Setting the Base Meter.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open Time Operations Window: Option+1 on the numeric keypad</li>
+</ul>
+
+<h3 id="setting-the-base-tempo">Setting the Base Tempo</h3>
+<p>The default tempo for a new session is 120 beats per minute. If you need to change the tempo and your session will use only one constant tempo throughout, you can change the tempo using any of the following methods:</p>
+
+<p>Choose Event&gt;Tempo Operations&gt;Constant…  Pro Tools opens the Tempo Operations dialog with the Constant view displayed. Pressing Option+2 on the numeric keypad will also open the Tempo Operations window. Here you can set the tempo using the available parameters.
+Within the MIDI Controls cluster of either the Transport or edit window you can enter a bpm value in the tempo text field. Alternatively, you can tap the letter T to establish a tempo and Pro Tools will calculate the bpm value based on the speed of the key taps.
+With Flo Tools, double-tap Command+F11 and enter a bpm value.</p>
+
+<p>demonstration: 54 Setting the Base Tempo</p>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open Tempo Operations Window: Option+2 on the numeric keypad</li>
+</ul>
+
+<h2 id="setting-the-key-signature">Setting the Key Signature</h2>
+<p>Sometimes it’s a good idea to make sure note names are appropriate for the key signature of the MIDI data being recorded. This is normally done by choosing Events&gt;Add Key Change… Although the graphic representations of key signatures in the Add Key Change… dialog aren’t yet accessible, if you use Keyboard Maestro, it’s possible to add key changes with the help of some free macros created specifically for this purpose. You can download the macros here.</p>
+
+<blockquote>
+  <audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/55 Add Key Change Macros.mp3" /></audio>
+</blockquote>
+
+<h6 id="key-shortcuts-3">Key Shortcuts:</h6>
+
+<ul>
+  <li>Add Sharps: Shift+1 through 7 on the numbers row</li>
+  <li>Add Flats: Option+1 through 7 on the numbers row</li>
+  <li>Note that above shortcuts only work if you’ve imported the Key Change Dialog macros</li>
+</ul>
+
+<h2 id="preparing-to-record-midi">Preparing to Record MIDI</h2>
+<p>Before you record to a MIDI track, you’ll need to check to make sure that any physical cables as well as internal routing is set correctly.</p>
+
+<h3 id="connecting-a-midi-device">Connecting a MIDI Device</h3>
+<p>If you’re using a MIDI track to send MIDI data to an external device such as a keyboard or sound module, make sure that any controller keyboard or drum pads are properly connected via MIDI Out to the MIDI In of your interface and that the MIDI Out of the interface is connected to the MIDI In of the keyboard or module. If you’re using a USB controller that requires a power supply, make sure the device is powered up. External MIDI device setups can vary greatly so it’s beyond the scope of this guide to cover such configurations.</p>
+
+<h3 id="checking-midi-inputsoutputs">Checking MIDI Inputs/Outputs</h3>
+<p>Once your MIDI controller is connected, you’ll need to configure the inputs and outputs of your tracks. In the case of MIDI tracks, the input selector is the equivalent of the Audio Input Path selector of an audio track. On MIDI tracks the Input Selector is located in a track’s I/O section in the Mix or Edit window. On instrument tracks, the Input selector is located within the Instrument view of a track in the Mix or Edit window. The locations of Output selectors between MIDI and Instrument tracks are much the same as with Input Selectors: MIDI tracks with their outputs in the I/O area and Instrument tracks with outputs in the Instrument view.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/56 Checking MIDI Inputs and Outputs.mp3" /></audio>
+
+<h6 id="key-shortcuts-4">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open MIDI Keyboard Window: Shift+K</li>
+  <li>Letters A through K for C major scale within the MIDI Keyboard window</li>
+  <li>Letters W, E, T, Y and U for sharp/flat keys within the MIDI Keyboard window</li>
+  <li>Octave Down : Z</li>
+  <li>Octave Up: X</li>
+</ul>
+
+<h3 id="record-enabling-midi-compatible-tracks">Record-Enabling MIDI-Compatible Tracks</h3>
+<p>Arming MIDI tracks is much the same as with arming audio tracks. Clicking the Track Record Enable button or selecting a track and pressing Shift+R will arm a MIDI or Instrument track for recording. You can use Command+Down/Up Arrow to record enable the next/previous MIDI track even if there are different track types nestled between the MIDI tracks. Unlike audio tracks, arming a subsequent MIDI or Instrument track by clicking the Track Record Enable button will cancel the record-enable status on the previously armed track. In order to arm multiple MIDI tracks, it’s necessary to select the tracks first then use Shift+R to arm all selected tracks.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/57 record-enabling MIDI Compatible Tracks.mp3" /></audio>
+
+<h6 id="key-shortcuts-5">Key Shortcuts:</h6>
+
+<ul>
+  <li>Speak Record-Enabled Tracks (with Flo Tools): Option+Shift+R</li>
+  <li>Disarm All Tracks (with Flo Tools): Double-tap Option+Shift+R</li>
+  <li>Arm/Disarm Selected Tracks: Shift+R</li>
+  <li>Arm Next/Previous MIDI or Instrument Track: Command+Down/Up Arrow</li>
+</ul>
+
+<h3 id="setting-record-options">Setting Record Options</h3>
+<p>Pro Tools provides several options specific to the process of recording MIDI data. These include Wait for Note, Click and Countoff, MIDI Merge and Input Quantize. You might want to review these settings before beginning to record.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/58 Setting Record Options.mp3" /></audio>
+
+<h2 id="using-virtual-instruments">Using Virtual Instruments</h2>
+<p>Virtual instruments can be inserted on aux tracks or on instrument tracks for playback of MIDI data or for monitoring the live input from a MIDI controller.</p>
+
+<h3 id="placing-a-virtual-instrument-on-an-instrument-track">Placing a Virtual Instrument on an Instrument Track</h3>
+<p>In the insert section of an instrument track, click on Insert Selector A. From the pop-up menu, choose a virtual instrument from the instrument category of the multichannel plug-in submenu.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/59 Placing a Virtual Instrument on an Instrument Track.mp3" /></audio>
+
+<h6 id="key-shortcuts-6">Key Shortcuts:</h6>
+
+<ul>
+  <li>Load Next/Previous Preset (with Flo Tools): Right Bracket/Left Bracket in the Plug-In Window</li>
+</ul>
+
+<h2 id="recording-midi">Recording MIDI</h2>
+<p>When you’re ready to record, make sure the track or tracks you wish to record to are armed. Press Return to move to the beginning of the timeline and press Command+Spacebar or 3 on the numeric keypad.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/60 Recording MIDI.mp3" /></audio>
+
+<h3 id="viewing-midi-data-on-midi-compatible-tracks">Viewing MIDI Data on MIDI-Compatible Tracks</h3>
+<p>Once you’ve recorded MIDI data to a track, playing it back will trigger sounds  from the external MIDI modules or virtual instrument plug-ins. In the edit window, data contained within a MIDI or Instrument track can be represented a few ways. Much like audio, MIDI can be displayed as clips (which is the default) or as individual notes. with a track selected, pressing Control+Hyphen (on the qwerty keyboard) will cycle between the two primary display modes.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/61 Viewing MIDI Data on MIDI-Compatible Tracks.mp3" /></audio>
+
+<h6 id="key-shortcuts-7">Key Shortcuts:</h6>
+
+<ul>
+  <li>Toggle Track View on Selected Tracks: Control+Hyphen</li>
+</ul>
+
+<h3 id="midi-clips-view">MIDI Clips View</h3>
+<p>The default track view for MIDI or Instrument tracks is Clips View. Much like audio clips, MIDI clips can be cut, copied and pasted as well as split, trimmed and nudged. When navigating in clips view, pressing Tab will move to the next clip boundary and the other navigation shortcuts used for audio clips applies the same way to MIDI clips.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/62 MIDI Clips View.mp3" /></audio>
+
+<h6 id="key-shortcuts-8">Key Shortcuts:</h6>
+
+<ul>
+  <li>Move to Next Clip Boundary: Tab Key</li>
+  <li>Move to Previous Clip Boundary: Option+Tab</li>
+</ul>
+
+<h3 id="midi-notes-view">MIDI Notes View</h3>
+<p>With MIDI Notes View, navigation is per note rather than per clip. Pressing the left/right arrows moves to and selects the previous or next note respectively.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/63 MIDI Notes View.mp3" /></audio>
+
+<h6 id="key-shortcuts-9">Key Shortcuts:</h6>
+
+<ul>
+  <li>Select Next/Previous Note: Right Arrow/Left Arrow</li>
+  <li>Select Next/Previous Report Category (with Flo Tools): Option+shift+Right Bracket/Left Bracket</li>
+</ul>
+
+<h3 id="midi-editor-window">MIDI Editor Window</h3>
+<p>MIDI can also be displayed in the MIDI Editor window. This window is not particularly accessible. Some elements are visible but there’s no way to truly interact with any controls that can’t be found elsewhere in Pro Tools.</p>
+
+<h3 id="midi-event-list">MIDI Event List</h3>
+<p>A window much more useful than the MIDI Editor for viewing MIDI data is the MIDI Event List window. Press Option+Equals to open the MIDI Event List window where items are displayed in a vertical list with columns for Start, End, Length, Pitch, Velocity, etc.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/64 MIDI Event List.mp3" /></audio>
+:ET

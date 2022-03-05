@@ -1,0 +1,75 @@
+I"c%<p>This chapter focuses on working with MIDI and instrument tracks and techniques for selecting and editing MIDI data.</p>
+
+<!--more-->
+
+<h2 id="understanding-track-timebases">Understanding Track Timebases</h2>
+<p>As discussed earlier, there are two time bases for tracks: samples and ticks. Audio tracks default to samples and MIDI and instrument tracks default to ticks. All track types can be changed to either time base. When no time or tempo based operations are performed, events within the timeline simply exist either where they were recorded or placed. However, if tracks are switched to ticks timebase and the tempo or meter is changed, events on the timeline can shift and change location.</p>
+
+<h3 id="sample-based-operation-versus-tick-based-operation">Sample-Based Operation Versus Tick-Based Operation</h3>
+<p>For Sample-based tracks like audio, the clips are located on an absolute position on the timeline based on real time like minutes and seconds or SMPTE Time code. If the tempo of the session changes, clips in a sample-based track remain in their real time positions no matter what the tempo is. With tick-based tracks like instrument tracks, the position of notes and clips is based on bar and beat location rather than time. Therefore, if the tempo is slowed down, the position of notes relative to the start of the timeline is now later. A quarter note at 120 bpm has the same tick value as a quarter note at 60 bpm but, at the same bar/beat position, a quarter note at 60 bpm would occur later and last twice as long upon playback.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/149 Sample-Based Operation Versus Tick-Based Operation.mp3" /></audio>
+
+<h3 id="track-timebases">Track Timebases</h3>
+<p>Changing the timebase of a track will affect how it behaves when meter and tempo changes are applied. Audio clips whose timebase is changed to ticks will become associated with bars and beats and will move but in ways that differ from MIDI data. A clip will move based on its start point but the underlying tempo of the recorded material will not change. If an audio clip is separated into smaller clips, those clips might be associated with subdivisions in the bar and could potentially move along with tempo changes to a degree.</p>
+
+<p>For MIDI or instrument tracks, when changing the default timebase from ticks to samples, the MIDI events become associated with absolute time rather than bars and beats. Without changing the tempo, all notes and events will still occur at the correct points in time but, if the tempo is subsequently changed, the MIDI data will not move with the bars and beats to the equivalent positions now either earlier or later in time, depending on the tempo change.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/150 Track Timebases.mp3" /></audio>
+
+<h2 id="virtual-instruments">Virtual Instruments</h2>
+<p>Virtual instruments are most commonly used as plug-ins on an instrument track. MIDI tracks are capable of routing MIDI messages to virtual instrument plug-ins instantiated on other tracks as well as external hardware devices. In this section, we’ll focus on virtual instruments on Instrument tracks.</p>
+
+<h3 id="using-plug-in-virtual-instruments">Using Plug-In Virtual Instruments</h3>
+<p>When you instantiate a virtual instrument plug-in on an Instrument track or Auxiliary Input track, Pro Tools automatically creates a MIDI node to support all routing to and from the plug-in. For virtual instrument that has multitimbral capabilities like Xpand!2, Pro Tools creates the appropriate number of MIDI channels to include in the input or output selectors. If you’re using a single virtual instrument on an instrument track with no multitimbral aspects, you’ll normally be recording a single channel of information. If you have a multitimbral instrument, you’ll need to use MIDI tracks to target each channel of the virtual instrument.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/151 Using Plug-In Virtual Instruments.mp3" /></audio>
+
+<h2 id="midi-compatible-tracks-and-track-views">MIDI-Compatible Tracks and Track Views</h2>
+<p>MIDI data can be displayed in a couple of ways in the Edit window. Much like audio, MIDI data can be displayed in clips, and blocks but also as notes. In addition, there are views for MIDI volume, pan, mute as well as other continuous data like sustain and expression.</p>
+
+<h3 id="viewing-midi-data-in-the-edit-window">Viewing MIDI Data in the Edit Window</h3>
+<p>MIDI data is displayed within MIDI and Instrument tracks in the Edit window in a manner similar to audio. Clips act the same way and standard edit functions apply. The Edit window also displays MIDI data in the Counters Display Cluster. Flo Tools takes advantage of this feature. While the visual aspect of what’s being displayed isn’t of much use to screen reader users, it’s important to be aware of what’s being shown in the current track view since any edit functions will be affecting the currently displayed data. For example, if your instrument track’s view is set to volume, any cutting or pasting of data will only include volume information and not notes or clips. Make sure you check the track views before performing such edit functions.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/152 Viewing MIDI Data in the Edit Window.mp3" /></audio>
+
+<h3 id="midi-compatible-tracks-in-the-pro-tools-mix-window">MIDI-Compatible Tracks in the Pro Tools Mix Window</h3>
+<p>MIDI and Instrument tracks in the Mix window have similar controls to other tracks. Instrument tracks have an extra view in the Mix window for routing and some simple control.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/153 MIDI-Compatible Tracks in the Pro Tools Mix Window.mp3" /></audio>
+
+<h2 id="auditioning-and-playing-back-midi">Auditioning and Playing Back MIDI</h2>
+<p>Although working with MIDI data is much the same as working with audio, there are differences. Certain options and settings within Pro Tools Preferences affect how you playback and audition MIDI data. Let’s take a look at some of those settings.</p>
+
+<h3 id="midi-thru-option">MIDI Thru Option</h3>
+<p>The MIDI Thru option will almost invariably be checked all the time in your Pro Tools session. In case you need to troubleshoot, this setting should be the very first thing you verify. Make sure that MIDI Thru is checked under the Options menu.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/154 MIDI Thru Option.mp3" /></audio>
+
+<h3 id="default-thru-instrument-option">Default Thru Instrument Option</h3>
+<p>Incoming MIDI data is usually monitored through record-enabled tracks. Pro Tools also allows you to monitor from an unarmed track when it is selected or when it’s the topmost of a series of MIDI tracks by using the Default Thru Instrument feature. You can set up the Default Thru Instrument in Pro Tools Preferences from the Basics area of the MIDI Tab. If you find yourself needing to audition MIDI clips, the Default Thru Instrument will be the sound source for the auditioned clip.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/155 Default Thru Instrument Option.mp3" /></audio>
+
+<h2 id="editing-midi-data">Editing MIDI Data</h2>
+<p>As stated earlier, working with MIDI data is much the same as with audio. There are certain aspects of MIDI editing that are quite different.</p>
+
+<h3 id="editing-midi-clips">Editing MIDI Clips</h3>
+<p>MIDI clips behave similarly to audio clips. However, given that the notes in a MIDI clip are not audio, using edit functions like trimming, cutting and pasting can yield results very different from that of audio clip editing.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/156 Editing MIDI Clips.mp3" /></audio>
+
+<h3 id="editing-midi-notes">Editing MIDI Notes</h3>
+<p>There are three methods for editing MIDI data. The first method (mentioned above) being the standard cut, copy and paste-type functions that can be performed in the Edit window. The second method can be used in either the Mix or Edit windows and involves using the arrow keys along with modifiers to select and alter notes on a selected track.</p>
+
+<h3 id="editing-existing-midi-notes">Editing Existing MIDI Notes</h3>
+<p>When a selected MIDI track is set to Notes view, pressing the left and right arrow keys moves through and selects notes. While standard cut, copy and paste commands do work in this mode, certain modifier and arrow key combinations can change the pitch and velocity of selected notes as well.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/157 Editing Existing MIDI Notes.mp3" /></audio>
+
+<h3 id="midi-event-list">MIDI Event List</h3>
+<p>While the method above works well for basic MIDI editing, the MIDI Event List offers a more familiar environment for detailed editing. To open the MIDI Event List, choose WINDOW &gt; MIDI EVENT LIST or press Option+Equals.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/158 MIDI Event List.mp3" /></audio>
+
+:ET

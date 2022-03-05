@@ -1,0 +1,79 @@
+I"�<p>This chapter focuses on the Elastic Audio feature of Pro Tools. At the time of this publication, Elastic Audio is only somewhat accessible. Normally, one would rely heavily on what are known as event markers and warp markers to define and manipulate ranges of audio for stretching and compressing in order to alter timing. Since these markers are not yet accessible, the options available are limited but we will cover a few areas that are in part useable.</p>
+
+<!--more-->
+
+<h2 id="elastic-audio-basics">Elastic Audio Basics</h2>
+<p>Elastic Audio offers track-based time compression and expansion (TCE) through either a real-time plug-in (available only within the Edit window) or file-based processing through X-Form.</p>
+
+<h3 id="enabling-elastic-audio-on-a-track">Enabling Elastic Audio on a Track</h3>
+<p>Before any Elastic Audio processing can be done on a track, Elastic Audio needs to be enabled on a track by choosing one of the available algorithms. The Elastic Audio plug-in setting can be found within a track’s controls in the Edit window.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/159 Enabling Elastic Audio on a Track.mp3" /></audio>
+
+<h6 id="key-shortcuts">Key Shortcuts:</h6>
+
+<ul>
+  <li>Speak Elastic Audio Status on a Focused Track (with Flo Tools Inspector): E</li>
+  <li>Open Elastic Audio Plug-In for Focused Track (with Flo Tools Inspector): Double-tap E</li>
+</ul>
+
+<h3 id="auto-enabling-elastic-audio-for-new-tracks">Auto-Enabling Elastic Audio for New Tracks</h3>
+<p>If you find yourself working with Elastic Audio often on a given project or in general, you can set new tracks to automatically enable Elastic Audio processing. This option is available under the Processing tab of the Preferences dialog.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/160 Auto-Enabling Elastic Audio for New Tracks.mp3" /></audio>
+
+<h3 id="understanding-elastic-audio-analysis">Understanding Elastic Audio Analysis</h3>
+<p>Elastic Audio uses file-based analysis of clips. When you choose an algorithm, the waveforms of clips temporarily become greyed out as analysis occurs. Thus, timelines with multiple clips might take a while to fully process as the parent of sub clips are analyzed.</p>
+
+<h3 id="conforming-clips-to-the-session-tempo-map">Conforming Clips to the Session Tempo Map</h3>
+<p>There are two main ways you can conform a clip to a session tempo map. If you have a clip that matches the current tempo and you’d like to change both the session tempo along with the clip, enable the Elastic Audio plug-in on the track and then change the tempo of the session. The clip will change tempo to match the session, providing the track’s timebase is set to ticks. If you’ve imported a loop, you can select the clip in the timeline, enable Elastic Audio then choose CLIP &gt; CONFORM TO TEMPO to match it to the session tempo.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/161 Conforming Clips to the Session Tempo Map.mp3" /></audio>
+
+<h3 id="warp-indicators">Warp Indicators</h3>
+<p>As mentioned earlier, the warp -related track views are not currently accessible. There are a few menu commands that can be executed for very basic operations.</p>
+
+<h3 id="removing-clip-warping">Removing Clip Warping</h3>
+<p>If you’ve been experimenting with Elastic Audio or have reason to delete pre-existing warp markers, you can delete them by selecting the clips in question and choosing CLIPS &gt; REMOVE WARPING.</p>
+
+<p>]demonstration: 162 Removing Clip Warping]</p>
+
+<h2 id="elastic-audio-track-views">Elastic Audio Track Views</h2>
+<p>The two types of track views associated with Elastic Audio are Analysis View and Warp View. At the present time, there’s little that a screen reader user can do in these views. As mentioned earlier, warp markers can be deleted from a selected range. There is one more option available that involves the repositioning of event markers in the Analysis View.</p>
+
+<h2 id="moving-analysis-events">Moving Analysis Events</h2>
+<p>If you want to experiment with warping audio that has been analyzed, you can change a track view to Analysis View and select a range to nudge or cut and paste. By listening back to the results, you might find that an improvement can be achieved.</p>
+
+<p>]demonstration: 163 Moving Analysis Events]</p>
+
+<h2 id="quantizing-elastic-audio-events">Quantizing Elastic Audio Events</h2>
+<p>Elastic Audio events can be quantized to smooth out a performance or adjust character like swing to a performance.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/164 Quantizing Elastic Audio Events.mp3" /></audio>
+
+<h2 id="using-elastic-audio-for-pitch-changes">Using Elastic Audio for Pitch Changes</h2>
+<p>Elastic Audio can be utilized for pitch as well as rhythmic changes. Pitch manipulation can be done either from the Elastic Audio Properties window or from the Transpose page of the Event Operations window.</p>
+
+<h3 id="pitch-shifting-with-the-elastic-properties-window">Pitch Shifting with the Elastic Properties Window</h3>
+<p>In the Elastic Properties window, you can change the pitch of a selected clip by either typing in a value or by using the up or down arrow keys.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/165 Pitch Shifting with the Elastic Properties Window.mp3" /></audio>
+
+<h6 id="key-shortcuts-1">Key Shortcuts:</h6>
+
+<ul>
+  <li>Open Elastic Properties Window: Option+5 on the numeric keypad</li>
+</ul>
+
+<h3 id="pitch-shifting-with-the-transpose-window">Pitch Shifting with the Transpose Window</h3>
+<p>You can use the Transpose page of the Event Operations window to adjust the pitch of a selected clip using Elastic Audio. Choose EVENT &gt; EVENT OPERATIONS &gt; TRANSPOSE or press Option+T.</p>
+
+<audio controls=""><source src="https://raw.githubusercontent.com/PTAccess/PTAccess.github.io/master/audio/166 Pitch Shifting with the Transpose Window.mp3" /></audio>
+
+<h6 id="key-shortcuts-2">Key Shortcuts:</h6>
+
+<ul>
+  <li>Transpose Window: Option+T</li>
+</ul>
+
+:ET
